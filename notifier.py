@@ -41,7 +41,7 @@ def build_message(changes: list[Change]) -> str:
     return "\n".join(lines)
 
 
-def send_notification(changes: list[Change]) -> bool:
+def send_telegram_message(text: str) -> bool:
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
 
@@ -49,13 +49,12 @@ def send_notification(changes: list[Change]) -> bool:
         print("[ERROR] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set")
         return False
 
-    message = build_message(changes)
-    print(f"[INFO] Sending Telegram notification to chat {chat_id}")
+    print(f"[INFO] Sending Telegram message to chat {chat_id}")
 
     try:
         resp = requests.post(
             _TELEGRAM_API.format(token=token),
-            json={"chat_id": chat_id, "text": message, "disable_web_page_preview": True},
+            json={"chat_id": chat_id, "text": text, "disable_web_page_preview": True},
             timeout=_REQUEST_TIMEOUT,
         )
         if resp.ok:
@@ -66,3 +65,7 @@ def send_notification(changes: list[Change]) -> bool:
     except requests.RequestException as exc:
         print(f"[ERROR] Failed to send Telegram message: {exc}")
         return False
+
+
+def send_notification(changes: list[Change]) -> bool:
+    return send_telegram_message(build_message(changes))

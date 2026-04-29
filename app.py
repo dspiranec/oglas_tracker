@@ -9,7 +9,7 @@ from __future__ import annotations
 import sys
 
 from config import CATEGORIES, STATE_FILE
-from notifier import Change, send_notification
+from notifier import Change, send_notification, send_telegram_message
 from providers.njuskalo import NjuskaloProvider
 from state import load_state, save_state
 
@@ -57,6 +57,18 @@ def run() -> None:
         send_notification(changes)
 
     save_state(STATE_FILE, new_state)
+
+    # TODO: obriši ovaj test blok nakon što potvrdiš da Telegram radi
+    summary_lines = []
+    for r in results:
+        old = prev_state.get(r.category, "?")
+        summary_lines.append(f"  {r.category}: {old} → {r.count}")
+    send_telegram_message(
+        "\u2705 Oglas Tracker run završen.\n\n"
+        + "\n".join(summary_lines)
+        + f"\n\nPromjene: {len(changes)}"
+    )
+
     print("[INFO] Run complete")
 
 
