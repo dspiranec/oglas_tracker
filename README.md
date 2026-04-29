@@ -1,6 +1,6 @@
 # Oglas Tracker
 
-Automated tracker for Croatian classified-ad sites. Monitors ad counts every 5 minutes via GitHub Actions and sends a Telegram notification when new ads appear.
+Automated tracker for Croatian classified-ad sites. Monitors ad counts every 15 minutes via GitHub Actions (triggered by cron-job.org) and sends a Telegram notification when new ads appear.
 
 Currently supported: **Njuškalo** (server-side HTML).
 Planned: **Index Oglasi** (JavaScript rendering via Playwright).
@@ -73,15 +73,32 @@ Go to **Settings → Secrets and variables → Actions** in your repository and 
 
 ---
 
-## Deploy (GitHub Actions)
+## Deploy (GitHub Actions + cron-job.org)
 
-The workflow is already configured in `.github/workflows/check.yml`.
+The workflow is configured in `.github/workflows/check.yml` and triggered externally by cron-job.org for reliable scheduling.
 
-- **Schedule:** runs every 5 minutes (`*/5 * * * *`).
-- **Manual trigger:** you can also run it via *Actions → Check Ads → Run workflow*.
+- **Manual trigger:** you can run it via *Actions → Check Ads → Run workflow*.
 - After each run the workflow commits updated `state.json` back to the repo.
 
-> **Note:** GitHub Actions cron is best-effort and may have delays of up to a few minutes.
+### Setting up cron-job.org
+
+GitHub Actions built-in cron is unreliable (delays of 30+ minutes are common). Use [cron-job.org](https://cron-job.org) instead:
+
+1. Create a **GitHub Personal Access Token (fine-grained)**:
+   - Go to https://github.com/settings/tokens?type=beta
+   - **Token name:** `cron-job-trigger`
+   - **Repository access:** Only select repositories → `oglas_tracker`
+   - **Permissions:** Contents: Read, Metadata: Read
+   - Copy the token
+
+2. Register at https://cron-job.org (free) and create a new cron job:
+   - **URL:** `https://api.github.com/repos/<your-user>/oglas_tracker/dispatches`
+   - **Schedule:** every 15 minutes
+   - **Method:** POST
+   - **Headers:**
+     - `Authorization: Bearer <YOUR_PAT_TOKEN>`
+     - `Accept: application/vnd.github+json`
+   - **Body:** `{"event_type": "check-ads"}`
 
 ---
 
@@ -117,5 +134,5 @@ providers/
 | `Selector 'strong.entities-count' not found` | Njuškalo may have changed their HTML. Inspect the page and update `_SELECTOR` in `providers/njuskalo.py`. |
 | Telegram message not arriving | Verify the bot token and chat ID. Make sure you sent at least one message to the bot first. Check `https://api.telegram.org/bot<TOKEN>/getUpdates`. |
 | Telegram API returns 403 | The bot was blocked by the user. Unblock it in Telegram. |
-| Workflow never runs | GitHub disables scheduled workflows after 60 days of repo inactivity. Push a commit or trigger manually. |
+| Workflow never runs | Check cron-job.org dashboard for failures. Verify the PAT token is valid and has correct permissions. |
 | `state.json` merge conflict | Delete the file and let the next run reinitialise it. |
