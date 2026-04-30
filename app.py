@@ -1,7 +1,7 @@
 """Oglas Tracker – main entry point.
 
-Scrapes configured ad categories, detects count increases,
-sends a Telegram notification when new ads appear,
+Scrapes configured ad categories from Njuškalo and Index Oglasi,
+detects count increases, sends Telegram notifications,
 and delivers a daily summary report at 21:00.
 """
 
@@ -9,8 +9,10 @@ from __future__ import annotations
 
 import sys
 
-from config import CATEGORIES, STATE_FILE
+from config import INDEX_CATEGORIES, NJUSKALO_CATEGORIES, STATE_FILE
 from notifier import Change, send_notification, send_telegram_message
+from providers.base import ScrapeResult
+from providers.index import IndexProvider
 from providers.njuskalo import NjuskaloProvider
 from state import get_counts, load_state, save_state
 from stats import (
@@ -25,8 +27,14 @@ from stats import (
 def run() -> None:
     print("[INFO] Starting oglas tracker run")
 
-    provider = NjuskaloProvider()
-    results, errors = provider.scrape(CATEGORIES)
+    njuskalo = NjuskaloProvider()
+    nj_results, nj_errors = njuskalo.scrape(NJUSKALO_CATEGORIES)
+
+    index = IndexProvider()
+    idx_results, idx_errors = index.scrape(INDEX_CATEGORIES)
+
+    results: list[ScrapeResult] = nj_results + idx_results
+    errors: dict[str, str] = {**nj_errors, **idx_errors}
 
     state = load_state(STATE_FILE)
     state = ensure_stats(state)

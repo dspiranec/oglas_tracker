@@ -5,15 +5,18 @@ from dataclasses import dataclass
 
 import requests
 
-from config import CATEGORIES, DISPLAY_NAMES
+from config import ALL_CATEGORIES, DISPLAY_NAMES
 
 _TELEGRAM_API = "https://api.telegram.org/bot{token}/sendMessage"
 _REQUEST_TIMEOUT = 10
 
 EMOJI_MAP: dict[str, str] = {
-    "auti": "\U0001F697",
-    "kuce": "\U0001F3E0",
-    "stanovi": "\U0001F3E2",
+    "nj_auti": "\U0001F697",
+    "nj_kuce": "\U0001F3E0",
+    "nj_stanovi": "\U0001F3E2",
+    "idx_auti": "\U0001F697",
+    "idx_kuce": "\U0001F3E0",
+    "idx_stanovi": "\U0001F3E2",
 }
 
 
@@ -32,10 +35,10 @@ def build_message(changes: list[Change]) -> str:
         display = DISPLAY_NAMES.get(c.category, c.category)
         lines.append(f"{emoji} {display}: {c.old_count} → {c.new_count}")
 
-    lines.append("\nProvjeri Njuškalo:")
+    lines.append("\nProvjeri oglase:")
     for c in changes:
         display = DISPLAY_NAMES.get(c.category, c.category)
-        url = CATEGORIES.get(c.category, "")
+        url = ALL_CATEGORIES.get(c.category, "")
         lines.append(f"{display}: {url}")
 
     return "\n".join(lines)
@@ -54,7 +57,7 @@ def send_telegram_message(text: str) -> bool:
     try:
         resp = requests.post(
             _TELEGRAM_API.format(token=token),
-            json={"chat_id": chat_id, "text": text, "disable_web_page_preview": True},
+            json={"chat_id": chat_id, "text": text, "parse_mode": "Markdown", "disable_web_page_preview": True},
             timeout=_REQUEST_TIMEOUT,
         )
         if resp.ok:

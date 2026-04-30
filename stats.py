@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone, timedelta
 
-from config import DISPLAY_NAMES
+from config import CATEGORY_ORDER, DISPLAY_NAMES
 from notifier import EMOJI_MAP
 
 _TZ = timezone(timedelta(hours=2))
@@ -87,27 +87,33 @@ def build_daily_report(state: dict, current_counts: dict[str, int]) -> str:
             for reason in reasons:
                 lines.append(f"   {display}: {reason}")
 
-    lines.append("")
-
     last_counts = stats.get("last_report_counts", {})
-    for cat in ("auti", "kuce", "stanovi"):
-        emoji = EMOJI_MAP.get(cat, "\U0001F4CB")
-        display = DISPLAY_NAMES.get(cat, cat)
-        count = current_counts.get(cat, 0)
-        suffix = "oglas" if count == 1 else "oglasa"
 
-        prev = last_counts.get(cat)
-        if prev is not None:
-            diff = count - prev
-            if diff > 0:
-                diff_str = f" (\U0001F7E2 +{diff})"
-            elif diff < 0:
-                diff_str = f" (\U0001F534 {diff})"
+    groups = [
+        ("Njuškalo", [c for c in CATEGORY_ORDER if c.startswith("nj_")]),
+        ("Index", [c for c in CATEGORY_ORDER if c.startswith("idx_")]),
+    ]
+
+    for group_name, cats in groups:
+        lines.append(f"\n*{group_name}*")
+        for cat in cats:
+            emoji = EMOJI_MAP.get(cat, "\U0001F4CB")
+            short_name = DISPLAY_NAMES.get(cat, cat).replace(f"{group_name} ", "")
+            count = current_counts.get(cat, 0)
+            suffix = "oglas" if count == 1 else "oglasa"
+
+            prev = last_counts.get(cat)
+            if prev is not None:
+                diff = count - prev
+                if diff > 0:
+                    diff_str = f" (\U0001F7E2 +{diff})"
+                elif diff < 0:
+                    diff_str = f" (\U0001F534 {diff})"
+                else:
+                    diff_str = " (\u2014 0)"
             else:
-                diff_str = " (\u2014 0)"
-        else:
-            diff_str = ""
+                diff_str = ""
 
-        lines.append(f"{emoji} {display}: {count} {suffix}{diff_str}")
+            lines.append(f"{emoji} {short_name}: {count} {suffix}{diff_str}")
 
     return "\n".join(lines)
