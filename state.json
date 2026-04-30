@@ -1,5 +1,17 @@
 {
   "auti": 1,
   "kuce": 66,
-  "stanovi": 78
+  "stanovi": 78,
+  "_stats": {
+    "date": "2026-04-30",
+    "total_runs": 1,
+    "successful_scrapes": {
+      "auti": 1,
+      "kuce": 1,
+      "stanovi": 1
+    },
+    "failed_scrapes": {},
+    "last_report_counts": {},
+    "report_sent": false
+  }
 }
