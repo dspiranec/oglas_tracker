@@ -78,23 +78,37 @@ def mark_report_sent(state: dict, current_counts: dict[str, int]) -> None:
     stats["last_report_counts"] = dict(current_counts)
 
 
-def build_daily_report(state: dict, current_counts: dict[str, int]) -> str:
+def build_daily_report(state: dict, current_counts: dict[str, int]) -> tuple[str, str]:
+    """Return (message_text, error_file_content). error_file_content is empty if no errors."""
     stats = state.get("_stats", {})
     date_str = datetime.now(_TZ).strftime("%d.%m.%Y.")
     total = stats.get("total_runs", 0)
     failed = stats.get("failed_scrapes", {})
     total_errors = sum(len(v) for v in failed.values())
 
-    lines = [f"\U0001F4CA Dnevni izvje\u0161taj -- {date_str}\n"]
+    lines = [f"\U0001F4CA Dnevni izvještaj -- {date_str}\n"]
 
     if total_errors == 0:
         lines.append(f"\u2705 {total}/{total} runova | Sve OK")
     else:
-        lines.append(f"\u2705 {total}/{total} runova | \u274C {total_errors} gre\u0161ka")
+        error_summary: dict[str, int] = {}
+        for cat, reasons in failed.items():
+            error_summary[cat] = len(reasons)
+        summary_parts = [
+            f"{DISPLAY_NAMES.get(cat, cat)}: {cnt}x"
+            for cat, cnt in error_summary.items()
+        ]
+        lines.append(f"\u2705 {total}/{total} runova | \u274C {total_errors} grešaka ({', '.join(summary_parts)})")
+
+    error_lines: list[str] = []
+    if total_errors > 0:
+        error_lines.append(f"Greške -- {date_str}\n")
         for cat, reasons in failed.items():
             display = DISPLAY_NAMES.get(cat, cat)
+            error_lines.append(f"--- {display} ({len(reasons)}x) ---")
             for reason in reasons:
-                lines.append(f"   {display}: {reason}")
+                error_lines.append(f"  {reason.strip()}")
+            error_lines.append("")
 
     last_counts = stats.get("last_report_counts", {})
 
@@ -125,4 +139,4 @@ def build_daily_report(state: dict, current_counts: dict[str, int]) -> str:
 
             lines.append(f"{emoji} {short_name}: {count} {suffix}{diff_str}")
 
-    return "\n".join(lines)
+    return "\n".join(lines), "\n".join(error_lines)

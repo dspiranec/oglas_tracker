@@ -10,7 +10,7 @@ from __future__ import annotations
 import sys
 
 from config import INDEX_CATEGORIES, NJUSKALO_CATEGORIES, STATE_FILE
-from notifier import Change, send_notification, send_telegram_message
+from notifier import Change, send_notification, send_telegram_document, send_telegram_message
 from providers.base import ScrapeResult
 from providers.index import IndexProvider
 from providers.njuskalo import NjuskaloProvider
@@ -81,8 +81,12 @@ def run() -> None:
 
     if should_send_report(state):
         current_counts = get_counts(state)
-        report = build_daily_report(state, current_counts)
-        if send_telegram_message(report):
+        report_text, error_text = build_daily_report(state, current_counts)
+        sent = send_telegram_message(report_text)
+        if sent and error_text:
+            date_str = state["_stats"]["date"]
+            send_telegram_document(error_text, f"greske_{date_str}.txt", caption="\u274C Detalji grešaka")
+        if sent:
             mark_report_sent(state, current_counts)
             print("[INFO] Daily report sent")
 
