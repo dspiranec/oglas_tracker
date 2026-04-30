@@ -21,20 +21,26 @@ class BaseProvider(ABC):
         Raises ``ScrapeError`` when the page cannot be parsed.
         """
 
-    def scrape(self, categories: dict[str, str]) -> list[ScrapeResult]:
-        """Scrape all *categories* and return successful results.
+    def scrape(
+        self, categories: dict[str, str]
+    ) -> tuple[list[ScrapeResult], dict[str, str]]:
+        """Scrape all *categories* and return results + errors.
 
         *categories* maps a human-readable name (e.g. ``"auti"``) to a URL.
         Individual failures are logged but never stop the remaining categories.
+
+        Returns a tuple of (successful_results, errors_dict).
         """
         results: list[ScrapeResult] = []
+        errors: dict[str, str] = {}
         for name, url in categories.items():
             try:
                 count = self.fetch_count(url)
                 results.append(ScrapeResult(category=name, count=count, url=url))
             except Exception as exc:  # noqa: BLE001
                 print(f"[ERROR] {self.__class__.__name__}: failed to scrape '{name}': {exc}")
-        return results
+                errors[name] = str(exc)
+        return results, errors
 
 
 class ScrapeError(Exception):

@@ -1,7 +1,8 @@
 """Oglas Tracker – main entry point.
 
 Scrapes configured ad categories, detects count increases,
-and sends a Telegram notification when new ads appear.
+sends a Telegram notification when new ads appear,
+and delivers a daily summary report at 21:00.
 """
 
 from __future__ import annotations
@@ -9,36 +10,50 @@ from __future__ import annotations
 import sys
 
 from config import CATEGORIES, STATE_FILE
-from notifier import Change, send_notification
+from notifier import Change, send_notification, send_telegram_message
 from providers.njuskalo import NjuskaloProvider
-from state import load_state, save_state
+from state import get_counts, load_state, save_state
+from stats import (
+    build_daily_report,
+    ensure_stats,
+    mark_report_sent,
+    record_run,
+    should_send_report,
+)
 
 
 def run() -> None:
     print("[INFO] Starting oglas tracker run")
 
     provider = NjuskaloProvider()
-    results = provider.scrape(CATEGORIES)
+    results, errors = provider.scrape(CATEGORIES)
 
-    if not results:
-        print("[WARN] No categories were successfully scraped")
+    state = load_state(STATE_FILE)
+    state = ensure_stats(state)
+
+    successes = [r.category for r in results]
+    record_run(state, successes, errors)
+
+    if not results and not errors:
+        print("[WARN] No categories were processed")
+        save_state(STATE_FILE, state)
         return
 
-    prev_state = load_state(STATE_FILE)
-    first_run = len(prev_state) == 0
+    prev_counts = get_counts(state)
+    first_run = len(prev_counts) == 0
 
     if first_run:
-        print("[INFO] First run – initialising state without sending email")
-        new_state = {r.category: r.count for r in results}
-        save_state(STATE_FILE, new_state)
+        print("[INFO] First run – initialising state without sending notification")
+        for r in results:
+            state[r.category] = r.count
+        save_state(STATE_FILE, state)
         return
 
     changes: list[Change] = []
-    new_state = dict(prev_state)
 
     for result in results:
-        old_count = prev_state.get(result.category)
-        new_state[result.category] = result.count
+        old_count = prev_counts.get(result.category)
+        state[result.category] = result.count
 
         if old_count is None:
             print(f"[INFO] New category '{result.category}' detected ({result.count} ads)")
@@ -56,7 +71,14 @@ def run() -> None:
     if changes:
         send_notification(changes)
 
-    save_state(STATE_FILE, new_state)
+    if should_send_report(state):
+        current_counts = get_counts(state)
+        report = build_daily_report(state, current_counts)
+        if send_telegram_message(report):
+            mark_report_sent(state, current_counts)
+            print("[INFO] Daily report sent")
+
+    save_state(STATE_FILE, state)
     print("[INFO] Run complete")
 
 
