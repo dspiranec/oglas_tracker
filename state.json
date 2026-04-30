@@ -4,15 +4,15 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-04-30",
-    "total_runs": 34,
+    "total_runs": 35,
     "successful_scrapes": {
       "auti": 1,
       "kuce": 1,
       "stanovi": 1,
-      "nj_auti": 33,
-      "nj_kuce": 33,
-      "nj_stanovi": 33,
-      "idx_stanovi": 33
+      "nj_auti": 34,
+      "nj_kuce": 34,
+      "nj_stanovi": 34,
+      "idx_stanovi": 34
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -48,7 +48,8 @@
         "20:16 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
         "20:32 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
         "20:47 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
-        "21:02 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n"
+        "21:02 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
+        "21:22 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n"
       ],
       "idx_kuce": [
         "12:02 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
@@ -83,7 +84,8 @@
         "20:16 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
         "20:32 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
         "20:47 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
-        "21:02 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n"
+        "21:02 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n",
+        "21:22 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n"
       ]
     },
     "last_report_counts": {},
