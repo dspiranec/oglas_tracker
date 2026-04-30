@@ -7,6 +7,8 @@ from notifier import EMOJI_MAP
 
 _TZ = timezone(timedelta(hours=2))
 _REPORT_HOUR = 21
+_REPORT_MINUTE_FROM = 20
+_REPORT_MINUTE_TO = 40
 
 EMPTY_STATS: dict = {
     "date": "",
@@ -58,9 +60,16 @@ def record_run(
         fc.setdefault(cat, []).append(f"{_now_time_str()} - {reason}")
 
 
+def _now_minute() -> int:
+    return datetime.now(_TZ).minute
+
+
 def should_send_report(state: dict) -> bool:
     stats = state.get("_stats", {})
-    return _now_hour() >= _REPORT_HOUR and not stats.get("report_sent", False)
+    if stats.get("report_sent", False):
+        return False
+    h, m = _now_hour(), _now_minute()
+    return (h > _REPORT_HOUR) or (h == _REPORT_HOUR and m >= _REPORT_MINUTE_FROM)
 
 
 def mark_report_sent(state: dict, current_counts: dict[str, int]) -> None:
