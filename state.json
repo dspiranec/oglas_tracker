@@ -4,14 +4,29 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-04-30",
-    "total_runs": 1,
+    "total_runs": 2,
     "successful_scrapes": {
       "auti": 1,
       "kuce": 1,
-      "stanovi": 1
+      "stanovi": 1,
+      "nj_auti": 1,
+      "nj_kuce": 1,
+      "nj_stanovi": 1,
+      "idx_stanovi": 1
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "idx_auti": [
+        "12:02 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n"
+      ],
+      "idx_kuce": [
+        "12:02 - Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[class*=count]\") to be visible\n"
+      ]
+    },
     "last_report_counts": {},
     "report_sent": false
-  }
+  },
+  "nj_auti": 1,
+  "nj_kuce": 66,
+  "nj_stanovi": 78,
+  "idx_stanovi": 55
 }
