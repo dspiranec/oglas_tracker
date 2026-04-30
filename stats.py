@@ -7,8 +7,7 @@ from notifier import EMOJI_MAP
 
 _TZ = timezone(timedelta(hours=2))
 _REPORT_HOUR = 21
-_REPORT_MINUTE_FROM = 20
-_REPORT_MINUTE_TO = 40
+_REPORT_MINUTE_FROM = 0
 
 EMPTY_STATS: dict = {
     "date": "",
