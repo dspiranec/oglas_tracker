@@ -3,21 +3,17 @@
   "kuce": 66,
   "stanovi": 78,
   "_stats": {
-    "date": "2026-05-02",
-    "total_runs": 94,
+    "date": "2026-05-03",
+    "total_runs": 1,
     "successful_scrapes": {
-      "nj_auti": 94,
-      "nj_kuce": 94,
-      "nj_stanovi": 94,
-      "idx_auti": 94,
-      "idx_kuce": 94,
-      "idx_stanovi": 93
+      "nj_auti": 1,
+      "nj_kuce": 1,
+      "nj_stanovi": 1,
+      "idx_auti": 1,
+      "idx_kuce": 1,
+      "idx_stanovi": 1
     },
-    "failed_scrapes": {
-      "idx_stanovi": [
-        "13:31 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n"
-      ]
-    },
+    "failed_scrapes": {},
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
@@ -29,7 +25,7 @@
       "idx_auti": 0,
       "idx_kuce": 34
     },
-    "report_sent": true
+    "report_sent": false
   },
   "nj_auti": 1,
   "nj_kuce": 66,
