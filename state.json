@@ -4,14 +4,14 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-05-06",
-    "total_runs": 7,
+    "total_runs": 8,
     "successful_scrapes": {
-      "nj_auti": 7,
-      "nj_kuce": 7,
-      "nj_stanovi": 7,
-      "idx_auti": 7,
-      "idx_kuce": 7,
-      "idx_stanovi": 7
+      "nj_auti": 8,
+      "nj_kuce": 8,
+      "nj_stanovi": 8,
+      "idx_auti": 8,
+      "idx_kuce": 8,
+      "idx_stanovi": 8
     },
     "failed_scrapes": {
       "avto_auti": [
@@ -21,7 +21,8 @@
         "00:46 - HTTP Error 403: ",
         "01:01 - HTTP Error 403: ",
         "01:16 - HTTP Error 403: ",
-        "01:31 - HTTP Error 403: "
+        "01:31 - HTTP Error 403: ",
+        "01:46 - HTTP Error 403: "
       ]
     },
     "last_report_counts": {
