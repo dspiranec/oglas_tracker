@@ -7,14 +7,14 @@ STATE_FILE = Path(__file__).resolve().parent / "state.json"
 NJUSKALO_CATEGORIES: dict[str, str] = {
     "nj_auti": (
         "https://www.njuskalo.hr/rabljeni-auti"
-        "?vehicleIds=11710%2C11727%2C12945%2C15414"
+        "?vehicleIds=11710,11727,12945,15414"
+        "&price[min]=1000&price[max]=10000"
+        "&yearManufactured[min]=2010"
         "&adsWithImages=1"
-        "&price%5Bmin%5D=1000&price%5Bmax%5D=10000"
-        "&yearManufactured%5Bmin%5D=2014"
-        "&mileage%5Bmax%5D=150000"
         "&fuelTypeId=600"
-        "&motorSize%5Bmin%5D=1250"
-        "&motorPower%5Bmin%5D=70"
+        "&motorSize[min]=1250"
+        "&motorPower[min]=70"
+        "&mileage[max]=150000"
     ),
     "nj_kuce": (
         "https://www.njuskalo.hr/prodaja-kuca"
@@ -33,8 +33,7 @@ INDEX_CATEGORIES: dict[str, str] = {
     "idx_auti": (
         "https://www.index.hr/oglasi/auto-moto/osobni-automobili/pretraga"
         "?searchQuery=%257B%2522category%2522%253A%2522osobni-automobili%2522"
-        "%252C%2522priceTo%2522%253A%252210000%2522"
-        "%252C%2522makeYearFrom%2522%253A%25222013-12-31T23%253A00%253A00.000Z%2522"
+        "%252C%2522makeYearFrom%2522%253A%25222009-12-31T23%253A00%253A00.000Z%2522"
         "%252C%2522fuelIds%2522%253A%255B2%255D"
         "%252C%2522powerFrom%2522%253A%252270%2522"
         "%252C%2522mileageTo%2522%253A%2522150000%2522"
@@ -44,9 +43,9 @@ INDEX_CATEGORIES: dict[str, str] = {
         "%252205c67747-4f2a-4200-8b0f-ab71d677e170%2522%252C"
         "%2522d2226767-fcc2-4499-bfb1-d13da462f2cc%2522%252C"
         "%25224735081f-848a-4a6d-8fa2-1cde1843705f%2522%255D"
-        "%252C%2522page%2522%253A1"
         "%252C%2522sortOption%2522%253A4"
-        "%252C%2522module%2522%253A%2522auto-moto%2522%257D"
+        "%252C%2522module%2522%253A%2522auto-moto%2522"
+        "%252C%2522priceTo%2522%253A%252210000%2522%257D"
     ),
     "idx_kuce": (
         "https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga"
@@ -73,7 +72,44 @@ INDEX_CATEGORIES: dict[str, str] = {
     ),
 }
 
-ALL_CATEGORIES: dict[str, str] = {**NJUSKALO_CATEGORIES, **INDEX_CATEGORIES}
+AVTONET_CATEGORIES: dict[str, str] = {
+    "avto_auti": (
+        "https://www.avto.net/Ads/results.asp"
+        "?znamka=Ford&model=C-Max&modelID=&tip="
+        "&znamka2=Renault&model2=Scenic&tip2="
+        "&znamka3=&model3=&tip3="
+        "&cenaMin=0&cenaMax=10000"
+        "&letnikMin=2010&letnikMax=2090"
+        "&bencin=201&starost2=999&oblika="
+        "&ccmMin=1250&ccmMax=99999"
+        "&mocMin=&mocMax="
+        "&kmMin=0&kmMax=150000"
+        "&kwMin=74&kwMax=999"
+        "&motortakt=&motorvalji=&lokacija=0"
+        "&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX="
+        "&nosilnostMIN=&nosilnostMAX="
+        "&sedezevMIN=&sedezevMAX=&lezisc="
+        "&presek=&premer=&col=&vijakov=&EToznaka="
+        "&vozilo=&airbag=&barva=&barvaint=&doseg="
+        "&BkType=&BkOkvir=&BkOkvirType=&Bk4="
+        "&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000"
+        "&EQ4=100000000&EQ5=1000000000&EQ6=1000000000"
+        "&EQ7=1010100020&EQ8=1010000000&EQ9=100000002"
+        "&EQ10=1000000000&EQ11=1000000000"
+        "&KAT=1012200000"
+        "&PIA=&PIAzero=&PIAOut=&PSLO="
+        "&akcija=&paketgarancije=0&broker="
+        "&prikazkategorije=&kategorija="
+        "&ONLvid=&ONLnak=&zaloga=10&arhiv="
+        "&presort=&tipsort=&stran="
+    ),
+}
+
+ALL_CATEGORIES: dict[str, str] = {
+    **NJUSKALO_CATEGORIES,
+    **INDEX_CATEGORIES,
+    **AVTONET_CATEGORIES,
+}
 
 DISPLAY_NAMES: dict[str, str] = {
     "nj_auti": "Njuškalo Auti",
@@ -82,9 +118,11 @@ DISPLAY_NAMES: dict[str, str] = {
     "idx_auti": "Index Auti",
     "idx_kuce": "Index Kuće",
     "idx_stanovi": "Index Stanovi",
+    "avto_auti": "Avto.net Auti",
 }
 
 CATEGORY_ORDER: list[str] = [
     "nj_auti", "nj_kuce", "nj_stanovi",
     "idx_auti", "idx_kuce", "idx_stanovi",
+    "avto_auti",
 ]

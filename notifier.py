@@ -18,6 +18,7 @@ EMOJI_MAP: dict[str, str] = {
     "idx_auti": "\U0001F697",
     "idx_kuce": "\U0001F3E0",
     "idx_stanovi": "\U0001F3E2",
+    "avto_auti": "\U0001F697",
 }
 
 
