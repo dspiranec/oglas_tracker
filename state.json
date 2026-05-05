@@ -4,14 +4,14 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-05-05",
-    "total_runs": 81,
+    "total_runs": 82,
     "successful_scrapes": {
-      "nj_auti": 80,
-      "nj_kuce": 80,
-      "nj_stanovi": 81,
-      "idx_auti": 79,
-      "idx_kuce": 81,
-      "idx_stanovi": 81
+      "nj_auti": 81,
+      "nj_kuce": 81,
+      "nj_stanovi": 82,
+      "idx_auti": 80,
+      "idx_kuce": 82,
+      "idx_stanovi": 82
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -49,7 +49,8 @@
         "19:31 - HTTP Error 403: ",
         "19:50 - HTTP Error 403: ",
         "20:02 - HTTP Error 403: ",
-        "20:20 - HTTP Error 403: "
+        "20:20 - HTTP Error 403: ",
+        "20:31 - HTTP Error 403: "
       ],
       "nj_auti": [
         "15:31 - 500 Server Error: Internal Server Error for url: https://www.njuskalo.hr/rabljeni-auti?vehicleIds=11710,11727,12945,15414&price%5Bmin%5D=1000&price%5Bmax%5D=10000&yearManufactured%5Bmin%5D=2010&adsWithImages=1&fuelTypeId=600&motorSize%5Bmin%5D=1250&motorPower%5Bmin%5D=70&mileage%5Bmax%5D=150000"
