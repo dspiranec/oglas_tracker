@@ -3,73 +3,19 @@
   "kuce": 66,
   "stanovi": 78,
   "_stats": {
-    "date": "2026-05-05",
-    "total_runs": 95,
+    "date": "2026-05-06",
+    "total_runs": 1,
     "successful_scrapes": {
-      "nj_auti": 94,
-      "nj_kuce": 94,
-      "nj_stanovi": 95,
-      "idx_auti": 93,
-      "idx_kuce": 95,
-      "idx_stanovi": 95
+      "nj_auti": 1,
+      "nj_kuce": 1,
+      "nj_stanovi": 1,
+      "idx_auti": 1,
+      "idx_kuce": 1,
+      "idx_stanovi": 1
     },
     "failed_scrapes": {
-      "idx_auti": [
-        "09:31 - Count element not found on https://www.index.hr/oglasi/auto-moto/osobni-automobili/pretraga?searchQuery=%257B%2522category%2522%253A%2522osobni-automobili%2522%252C%2522priceTo%2522%253A%252210000%2522%252C%2522makeYearFrom%2522%253A%25222013-12-31T23%253A00%253A00.000Z%2522%252C%2522fuelIds%2522%253A%255B2%255D%252C%2522powerFrom%2522%253A%252270%2522%252C%2522mileageTo%2522%253A%2522150000%2522%252C%2522cubicCapacityFrom%2522%253A%25221250%2522%252C%2522includeModelIds%2522%253A%255B%252221b4202e-abde-4e34-9f43-884af625e3bc%2522%252C%252205c67747-4f2a-4200-8b0f-ab71d677e170%2522%252C%2522d2226767-fcc2-4499-bfb1-d13da462f2cc%2522%252C%25224735081f-848a-4a6d-8fa2-1cde1843705f%2522%255D%252C%2522page%2522%253A1%252C%2522sortOption%2522%253A4%252C%2522module%2522%253A%2522auto-moto%2522%257D",
-        "09:46 - Count element not found on https://www.index.hr/oglasi/auto-moto/osobni-automobili/pretraga?searchQuery=%257B%2522category%2522%253A%2522osobni-automobili%2522%252C%2522priceTo%2522%253A%252210000%2522%252C%2522makeYearFrom%2522%253A%25222013-12-31T23%253A00%253A00.000Z%2522%252C%2522fuelIds%2522%253A%255B2%255D%252C%2522powerFrom%2522%253A%252270%2522%252C%2522mileageTo%2522%253A%2522150000%2522%252C%2522cubicCapacityFrom%2522%253A%25221250%2522%252C%2522includeModelIds%2522%253A%255B%252221b4202e-abde-4e34-9f43-884af625e3bc%2522%252C%252205c67747-4f2a-4200-8b0f-ab71d677e170%2522%252C%2522d2226767-fcc2-4499-bfb1-d13da462f2cc%2522%252C%25224735081f-848a-4a6d-8fa2-1cde1843705f%2522%255D%252C%2522page%2522%253A1%252C%2522sortOption%2522%253A4%252C%2522module%2522%253A%2522auto-moto%2522%257D"
-      ],
       "avto_auti": [
-        "12:31 - HTTP Error 403: ",
-        "12:48 - HTTP Error 403: ",
-        "13:01 - HTTP Error 403: ",
-        "13:16 - HTTP Error 403: ",
-        "13:31 - HTTP Error 403: ",
-        "13:49 - HTTP Error 403: ",
-        "14:01 - HTTP Error 403: ",
-        "14:19 - HTTP Error 403: ",
-        "14:31 - HTTP Error 403: ",
-        "14:46 - HTTP Error 403: ",
-        "15:01 - HTTP Error 403: ",
-        "15:19 - HTTP Error 403: ",
-        "15:31 - HTTP Error 403: ",
-        "15:46 - HTTP Error 403: ",
-        "16:16 - HTTP Error 403: ",
-        "16:31 - HTTP Error 403: ",
-        "16:58 - HTTP Error 403: ",
-        "17:01 - HTTP Error 403: ",
-        "17:16 - HTTP Error 403: ",
-        "17:31 - HTTP Error 403: ",
-        "17:48 - HTTP Error 403: ",
-        "18:03 - HTTP Error 403: ",
-        "18:17 - HTTP Error 403: ",
-        "18:34 - HTTP Error 403: ",
-        "18:46 - HTTP Error 403: ",
-        "19:05 - HTTP Error 403: ",
-        "19:18 - HTTP Error 403: ",
-        "19:31 - HTTP Error 403: ",
-        "19:50 - HTTP Error 403: ",
-        "20:02 - HTTP Error 403: ",
-        "20:20 - HTTP Error 403: ",
-        "20:31 - HTTP Error 403: ",
-        "20:48 - HTTP Error 403: ",
-        "21:02 - HTTP Error 403: ",
-        "21:16 - HTTP Error 403: ",
-        "21:38 - HTTP Error 403: ",
-        "21:46 - HTTP Error 403: ",
-        "22:04 - HTTP Error 403: ",
-        "22:16 - HTTP Error 403: ",
-        "22:31 - HTTP Error 403: ",
-        "22:46 - HTTP Error 403: ",
-        "23:02 - HTTP Error 403: ",
-        "23:16 - HTTP Error 403: ",
-        "23:44 - HTTP Error 403: ",
-        "23:46 - HTTP Error 403: "
-      ],
-      "nj_auti": [
-        "15:31 - 500 Server Error: Internal Server Error for url: https://www.njuskalo.hr/rabljeni-auti?vehicleIds=11710,11727,12945,15414&price%5Bmin%5D=1000&price%5Bmax%5D=10000&yearManufactured%5Bmin%5D=2010&adsWithImages=1&fuelTypeId=600&motorSize%5Bmin%5D=1250&motorPower%5Bmin%5D=70&mileage%5Bmax%5D=150000"
-      ],
-      "nj_kuce": [
-        "15:31 - 500 Server Error: Internal Server Error for url: https://www.njuskalo.hr/prodaja-kuca?price%5Bmax%5D=270000&geo%5BlocationIds%5D=1731%2C1765%2C1766"
+        "00:02 - HTTP Error 403: "
       ]
     },
     "last_report_counts": {
@@ -83,7 +29,7 @@
       "idx_auti": 0,
       "idx_kuce": 34
     },
-    "report_sent": true
+    "report_sent": false
   },
   "nj_auti": 1,
   "nj_kuce": 65,
