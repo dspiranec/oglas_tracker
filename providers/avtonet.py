@@ -4,48 +4,20 @@ import re
 import time
 
 from bs4 import BeautifulSoup
-from curl_cffi import requests as cffi_requests
 from playwright.sync_api import sync_playwright
 
 from providers.base import BaseProvider, ScrapeError
 
-_REQUEST_TIMEOUT = 20
 _PRIKAZANO_RE = re.compile(r"Prikazano\s+(\d+)\s+oglas", re.IGNORECASE)
 _NAV_TIMEOUT = 60_000
 _CF_POLL_INTERVAL = 3
 _CF_MAX_WAIT = 30
 
 
-def _parse_count(html: str, url: str) -> int:
-    soup = BeautifulSoup(html, "html.parser")
+class AvtonetProvider(BaseProvider):
+    """Headless-browser scraper for Avto.net (Cloudflare-protected)."""
 
-    alert = soup.select_one("div.alert.alert-dark")
-    if alert:
-        match = _PRIKAZANO_RE.search(alert.get_text(strip=True))
-        if match:
-            return int(match.group(1))
-
-    match = _PRIKAZANO_RE.search(soup.get_text())
-    if match:
-        return int(match.group(1))
-
-    raise ScrapeError(f"'Prikazano N oglasov' pattern not found on {url}")
-
-
-def _fetch_with_curl_cffi(url: str) -> str | None:
-    """Fast path: curl_cffi impersonates Chrome TLS fingerprint."""
-    try:
-        resp = cffi_requests.get(url, impersonate="chrome", timeout=_REQUEST_TIMEOUT)
-        if resp.status_code == 200 and "Prikazano" in resp.text:
-            return resp.text
-    except Exception as exc:
-        print(f"[WARN] curl_cffi failed for avto.net: {exc}")
-    return None
-
-
-def _fetch_with_playwright(url: str) -> str | None:
-    """Fallback: headless Chromium waits for Cloudflare challenge to resolve."""
-    try:
+    def fetch_count(self, url: str) -> int:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(
                 headless=True,
@@ -66,30 +38,26 @@ def _fetch_with_playwright(url: str) -> str | None:
                 while elapsed < _CF_MAX_WAIT:
                     body = page.inner_text("body")
                     if _PRIKAZANO_RE.search(body):
-                        return page.content()
+                        break
                     if "Just a moment" not in page.title():
-                        return page.content()
+                        break
                     time.sleep(_CF_POLL_INTERVAL)
                     elapsed += _CF_POLL_INTERVAL
 
-                return page.content()
+                html = page.content()
             finally:
                 browser.close()
-    except Exception as exc:
-        print(f"[WARN] Playwright fallback failed for avto.net: {exc}")
-    return None
 
+        soup = BeautifulSoup(html, "html.parser")
 
-class AvtonetProvider(BaseProvider):
-    """Scraper for Avto.net with curl_cffi (fast) + Playwright (fallback)."""
+        alert = soup.select_one("div.alert.alert-dark")
+        if alert:
+            match = _PRIKAZANO_RE.search(alert.get_text(strip=True))
+            if match:
+                return int(match.group(1))
 
-    def fetch_count(self, url: str) -> int:
-        html = _fetch_with_curl_cffi(url)
-        if html is None:
-            print("[INFO] Trying Playwright fallback for avto.net")
-            html = _fetch_with_playwright(url)
+        match = _PRIKAZANO_RE.search(soup.get_text())
+        if match:
+            return int(match.group(1))
 
-        if html is None:
-            raise ScrapeError(f"All fetch methods failed for {url}")
-
-        return _parse_count(html, url)
+        raise ScrapeError(f"'Prikazano N oglasov' pattern not found on {url}")
