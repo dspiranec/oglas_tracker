@@ -4,14 +4,14 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-05-06",
-    "total_runs": 41,
+    "total_runs": 42,
     "successful_scrapes": {
-      "nj_auti": 41,
-      "nj_kuce": 41,
-      "nj_stanovi": 41,
-      "idx_auti": 41,
-      "idx_kuce": 41,
-      "idx_stanovi": 41
+      "nj_auti": 42,
+      "nj_kuce": 42,
+      "nj_stanovi": 42,
+      "idx_auti": 42,
+      "idx_kuce": 42,
+      "idx_stanovi": 42
     },
     "failed_scrapes": {
       "avto_auti": [
@@ -55,7 +55,8 @@
         "08:51 - 'Prikazano N oglasov' pattern not found on https://www.avto.net/Ads/results.asp?znamka=Ford&model=C-Max&modelID=&tip=&znamka2=Renault&model2=Scenic&tip2=&znamka3=&model3=&tip3=&cenaMin=0&cenaMax=10000&letnikMin=2010&letnikMax=2090&bencin=201&starost2=999&oblika=&ccmMin=1250&ccmMax=99999&mocMin=&mocMax=&kmMin=0&kmMax=150000&kwMin=74&kwMax=999&motortakt=&motorvalji=&lokacija=0&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX=&nosilnostMIN=&nosilnostMAX=&sedezevMIN=&sedezevMAX=&lezisc=&presek=&premer=&col=&vijakov=&EToznaka=&vozilo=&airbag=&barva=&barvaint=&doseg=&BkType=&BkOkvir=&BkOkvirType=&Bk4=&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000&EQ4=100000000&EQ5=1000000000&EQ6=1000000000&EQ7=1010100020&EQ8=1010000000&EQ9=100000002&EQ10=1000000000&EQ11=1000000000&KAT=1012200000&PIA=&PIAzero=&PIAOut=&PSLO=&akcija=&paketgarancije=0&broker=&prikazkategorije=&kategorija=&ONLvid=&ONLnak=&zaloga=10&arhiv=&presort=&tipsort=&stran=",
         "09:06 - 'Prikazano N oglasov' pattern not found on https://www.avto.net/Ads/results.asp?znamka=Ford&model=C-Max&modelID=&tip=&znamka2=Renault&model2=Scenic&tip2=&znamka3=&model3=&tip3=&cenaMin=0&cenaMax=10000&letnikMin=2010&letnikMax=2090&bencin=201&starost2=999&oblika=&ccmMin=1250&ccmMax=99999&mocMin=&mocMax=&kmMin=0&kmMax=150000&kwMin=74&kwMax=999&motortakt=&motorvalji=&lokacija=0&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX=&nosilnostMIN=&nosilnostMAX=&sedezevMIN=&sedezevMAX=&lezisc=&presek=&premer=&col=&vijakov=&EToznaka=&vozilo=&airbag=&barva=&barvaint=&doseg=&BkType=&BkOkvir=&BkOkvirType=&Bk4=&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000&EQ4=100000000&EQ5=1000000000&EQ6=1000000000&EQ7=1010100020&EQ8=1010000000&EQ9=100000002&EQ10=1000000000&EQ11=1000000000&KAT=1012200000&PIA=&PIAzero=&PIAOut=&PSLO=&akcija=&paketgarancije=0&broker=&prikazkategorije=&kategorija=&ONLvid=&ONLnak=&zaloga=10&arhiv=&presort=&tipsort=&stran=",
         "09:19 - 'Prikazano N oglasov' pattern not found on https://www.avto.net/Ads/results.asp?znamka=Ford&model=C-Max&modelID=&tip=&znamka2=Renault&model2=Scenic&tip2=&znamka3=&model3=&tip3=&cenaMin=0&cenaMax=10000&letnikMin=2010&letnikMax=2090&bencin=201&starost2=999&oblika=&ccmMin=1250&ccmMax=99999&mocMin=&mocMax=&kmMin=0&kmMax=150000&kwMin=74&kwMax=999&motortakt=&motorvalji=&lokacija=0&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX=&nosilnostMIN=&nosilnostMAX=&sedezevMIN=&sedezevMAX=&lezisc=&presek=&premer=&col=&vijakov=&EToznaka=&vozilo=&airbag=&barva=&barvaint=&doseg=&BkType=&BkOkvir=&BkOkvirType=&Bk4=&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000&EQ4=100000000&EQ5=1000000000&EQ6=1000000000&EQ7=1010100020&EQ8=1010000000&EQ9=100000002&EQ10=1000000000&EQ11=1000000000&KAT=1012200000&PIA=&PIAzero=&PIAOut=&PSLO=&akcija=&paketgarancije=0&broker=&prikazkategorije=&kategorija=&ONLvid=&ONLnak=&zaloga=10&arhiv=&presort=&tipsort=&stran=",
-        "09:23 - 'Prikazano N oglasov' pattern not found on https://www.avto.net/Ads/results.asp?znamka=Ford&model=C-Max&modelID=&tip=&znamka2=Renault&model2=Scenic&tip2=&znamka3=&model3=&tip3=&cenaMin=0&cenaMax=10000&letnikMin=2010&letnikMax=2090&bencin=201&starost2=999&oblika=&ccmMin=1250&ccmMax=99999&mocMin=&mocMax=&kmMin=0&kmMax=150000&kwMin=74&kwMax=999&motortakt=&motorvalji=&lokacija=0&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX=&nosilnostMIN=&nosilnostMAX=&sedezevMIN=&sedezevMAX=&lezisc=&presek=&premer=&col=&vijakov=&EToznaka=&vozilo=&airbag=&barva=&barvaint=&doseg=&BkType=&BkOkvir=&BkOkvirType=&Bk4=&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000&EQ4=100000000&EQ5=1000000000&EQ6=1000000000&EQ7=1010100020&EQ8=1010000000&EQ9=100000002&EQ10=1000000000&EQ11=1000000000&KAT=1012200000&PIA=&PIAzero=&PIAOut=&PSLO=&akcija=&paketgarancije=0&broker=&prikazkategorije=&kategorija=&ONLvid=&ONLnak=&zaloga=10&arhiv=&presort=&tipsort=&stran="
+        "09:23 - 'Prikazano N oglasov' pattern not found on https://www.avto.net/Ads/results.asp?znamka=Ford&model=C-Max&modelID=&tip=&znamka2=Renault&model2=Scenic&tip2=&znamka3=&model3=&tip3=&cenaMin=0&cenaMax=10000&letnikMin=2010&letnikMax=2090&bencin=201&starost2=999&oblika=&ccmMin=1250&ccmMax=99999&mocMin=&mocMax=&kmMin=0&kmMax=150000&kwMin=74&kwMax=999&motortakt=&motorvalji=&lokacija=0&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX=&nosilnostMIN=&nosilnostMAX=&sedezevMIN=&sedezevMAX=&lezisc=&presek=&premer=&col=&vijakov=&EToznaka=&vozilo=&airbag=&barva=&barvaint=&doseg=&BkType=&BkOkvir=&BkOkvirType=&Bk4=&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000&EQ4=100000000&EQ5=1000000000&EQ6=1000000000&EQ7=1010100020&EQ8=1010000000&EQ9=100000002&EQ10=1000000000&EQ11=1000000000&KAT=1012200000&PIA=&PIAzero=&PIAOut=&PSLO=&akcija=&paketgarancije=0&broker=&prikazkategorije=&kategorija=&ONLvid=&ONLnak=&zaloga=10&arhiv=&presort=&tipsort=&stran=",
+        "09:32 - 'Prikazano N oglasov' pattern not found on https://www.avto.net/Ads/results.asp?znamka=Ford&model=C-Max&modelID=&tip=&znamka2=Renault&model2=Scenic&tip2=&znamka3=&model3=&tip3=&cenaMin=0&cenaMax=10000&letnikMin=2010&letnikMax=2090&bencin=201&starost2=999&oblika=&ccmMin=1250&ccmMax=99999&mocMin=&mocMax=&kmMin=0&kmMax=150000&kwMin=74&kwMax=999&motortakt=&motorvalji=&lokacija=0&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX=&nosilnostMIN=&nosilnostMAX=&sedezevMIN=&sedezevMAX=&lezisc=&presek=&premer=&col=&vijakov=&EToznaka=&vozilo=&airbag=&barva=&barvaint=&doseg=&BkType=&BkOkvir=&BkOkvirType=&Bk4=&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000&EQ4=100000000&EQ5=1000000000&EQ6=1000000000&EQ7=1010100020&EQ8=1010000000&EQ9=100000002&EQ10=1000000000&EQ11=1000000000&KAT=1012200000&PIA=&PIAzero=&PIAOut=&PSLO=&akcija=&paketgarancije=0&broker=&prikazkategorije=&kategorija=&ONLvid=&ONLnak=&zaloga=10&arhiv=&presort=&tipsort=&stran="
       ]
     },
     "last_report_counts": {
