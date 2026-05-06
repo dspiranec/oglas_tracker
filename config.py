@@ -72,44 +72,7 @@ INDEX_CATEGORIES: dict[str, str] = {
     ),
 }
 
-AVTONET_CATEGORIES: dict[str, str] = {
-    "avto_auti": (
-        "https://www.avto.net/Ads/results.asp"
-        "?znamka=Ford&model=C-Max&modelID=&tip="
-        "&znamka2=Renault&model2=Scenic&tip2="
-        "&znamka3=&model3=&tip3="
-        "&cenaMin=0&cenaMax=10000"
-        "&letnikMin=2010&letnikMax=2090"
-        "&bencin=201&starost2=999&oblika="
-        "&ccmMin=1250&ccmMax=99999"
-        "&mocMin=&mocMax="
-        "&kmMin=0&kmMax=150000"
-        "&kwMin=74&kwMax=999"
-        "&motortakt=&motorvalji=&lokacija=0"
-        "&sirina=&dolzina=&dolzinaMIN=&dolzinaMAX="
-        "&nosilnostMIN=&nosilnostMAX="
-        "&sedezevMIN=&sedezevMAX=&lezisc="
-        "&presek=&premer=&col=&vijakov=&EToznaka="
-        "&vozilo=&airbag=&barva=&barvaint=&doseg="
-        "&BkType=&BkOkvir=&BkOkvirType=&Bk4="
-        "&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000"
-        "&EQ4=100000000&EQ5=1000000000&EQ6=1000000000"
-        "&EQ7=1010100020&EQ8=1010000000&EQ9=100000002"
-        "&EQ10=1000000000&EQ11=1000000000"
-        "&KAT=1012200000"
-        "&PIA=&PIAzero=&PIAOut=&PSLO="
-        "&akcija=&paketgarancije=0&broker="
-        "&prikazkategorije=&kategorija="
-        "&ONLvid=&ONLnak=&zaloga=10&arhiv="
-        "&presort=&tipsort=&stran="
-    ),
-}
-
-ALL_CATEGORIES: dict[str, str] = {
-    **NJUSKALO_CATEGORIES,
-    **INDEX_CATEGORIES,
-    **AVTONET_CATEGORIES,
-}
+ALL_CATEGORIES: dict[str, str] = {**NJUSKALO_CATEGORIES, **INDEX_CATEGORIES}
 
 DISPLAY_NAMES: dict[str, str] = {
     "nj_auti": "Njuškalo Auti",
@@ -118,11 +81,9 @@ DISPLAY_NAMES: dict[str, str] = {
     "idx_auti": "Index Auti",
     "idx_kuce": "Index Kuće",
     "idx_stanovi": "Index Stanovi",
-    "avto_auti": "Avto.net Auti",
 }
 
 CATEGORY_ORDER: list[str] = [
     "nj_auti", "nj_kuce", "nj_stanovi",
     "idx_auti", "idx_kuce", "idx_stanovi",
-    "avto_auti",
 ]
