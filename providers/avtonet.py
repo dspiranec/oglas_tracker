@@ -22,11 +22,11 @@ window.chrome = {runtime: {}};
 
 
 class AvtonetProvider(BaseProvider):
-    """Headless-browser scraper for Avto.net (Cloudflare-protected)."""
+    """Headed-browser scraper for Avto.net (Cloudflare-protected)."""
 
     def fetch_count(self, url: str) -> int:
         with sync_playwright() as pw:
-            browser = pw.firefox.launch(headless=True)
+            browser = pw.firefox.launch(headless=False)
             try:
                 context = browser.new_context(
                     user_agent=(
@@ -51,7 +51,9 @@ class AvtonetProvider(BaseProvider):
                     time.sleep(_CF_POLL_INTERVAL)
                     elapsed += _CF_POLL_INTERVAL
 
+                title = page.title()
                 html = page.content()
+                body_text = page.inner_text("body")
             finally:
                 browser.close()
 
@@ -67,4 +69,6 @@ class AvtonetProvider(BaseProvider):
         if match:
             return int(match.group(1))
 
+        print(f"[DEBUG] avto.net page title: {title}")
+        print(f"[DEBUG] avto.net body (first 500 chars): {body_text[:500]}")
         raise ScrapeError(f"'Prikazano N oglasov' pattern not found on {url}")
