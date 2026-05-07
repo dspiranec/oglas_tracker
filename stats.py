@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone, timedelta
+from html import escape as _html_escape
 
 from config import CATEGORY_ORDER, DISPLAY_NAMES
 from notifier import EMOJI_MAP
@@ -79,13 +80,14 @@ def mark_report_sent(state: dict, current_counts: dict[str, int]) -> None:
 
 def build_daily_report(state: dict, current_counts: dict[str, int]) -> tuple[str, str]:
     """Return (message_text, error_file_content). error_file_content is empty if no errors."""
+    h = _html_escape
     stats = state.get("_stats", {})
     date_str = datetime.now(_TZ).strftime("%d.%m.%Y.")
     total = stats.get("total_runs", 0)
     failed = stats.get("failed_scrapes", {})
     total_errors = sum(len(v) for v in failed.values())
 
-    lines = [f"\U0001F4CA Dnevni izvještaj -- {date_str}\n"]
+    lines = [f"\U0001F4CA Dnevni izvje\u0161taj \u2014 {date_str}\n"]
 
     if total_errors == 0:
         lines.append(f"\u2705 {total}/{total} runova | Sve OK")
@@ -94,10 +96,10 @@ def build_daily_report(state: dict, current_counts: dict[str, int]) -> tuple[str
         for cat, reasons in failed.items():
             error_summary[cat] = len(reasons)
         summary_parts = [
-            f"{DISPLAY_NAMES.get(cat, cat)}: {cnt}x"
+            f"{h(DISPLAY_NAMES.get(cat, cat))}: {cnt}x"
             for cat, cnt in error_summary.items()
         ]
-        lines.append(f"\u2705 {total}/{total} runova | \u274C {total_errors} grešaka ({', '.join(summary_parts)})")
+        lines.append(f"\u2705 {total}/{total} runova | \u274C {total_errors} gre\u0161aka ({', '.join(summary_parts)})")
 
     error_lines: list[str] = []
     if total_errors > 0:
@@ -117,10 +119,10 @@ def build_daily_report(state: dict, current_counts: dict[str, int]) -> tuple[str
     ]
 
     for group_name, cats in groups:
-        lines.append(f"\n*{group_name}*")
+        lines.append(f"\n<b>{h(group_name)}</b>")
         for cat in cats:
             emoji = EMOJI_MAP.get(cat, "\U0001F4CB")
-            short_name = DISPLAY_NAMES.get(cat, cat).replace(f"{group_name} ", "")
+            short_name = h(DISPLAY_NAMES.get(cat, cat).replace(f"{group_name} ", ""))
             count = current_counts.get(cat, 0)
             suffix = "oglas" if count == 1 else "oglasa"
 

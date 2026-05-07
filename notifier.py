@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import tempfile
 from dataclasses import dataclass
+from html import escape as _html_escape
 
 import requests
 
@@ -29,17 +30,18 @@ class Change:
 
 
 def build_message(changes: list[Change]) -> str:
+    h = _html_escape
     lines = ["\U0001F6A8 Novi oglasi pronađeni!\n"]
 
     for c in changes:
         emoji = EMOJI_MAP.get(c.category, "\U0001F4CB")
-        display = DISPLAY_NAMES.get(c.category, c.category)
-        lines.append(f"{emoji} {display}: {c.old_count} → {c.new_count}")
+        display = h(DISPLAY_NAMES.get(c.category, c.category))
+        lines.append(f"{emoji} {display}: {c.old_count} \u2192 {c.new_count}")
 
     lines.append("\nProvjeri oglase:")
     for c in changes:
-        display = DISPLAY_NAMES.get(c.category, c.category)
-        url = ALL_CATEGORIES.get(c.category, "")
+        display = h(DISPLAY_NAMES.get(c.category, c.category))
+        url = h(ALL_CATEGORIES.get(c.category, ""))
         lines.append(f"{display}: {url}")
 
     return "\n".join(lines)
@@ -65,7 +67,7 @@ def send_telegram_message(text: str) -> bool:
     try:
         resp = requests.post(
             _TELEGRAM_API.format(token=token, method="sendMessage"),
-            json={"chat_id": chat_id, "text": text, "parse_mode": "Markdown", "disable_web_page_preview": True},
+            json={"chat_id": chat_id, "text": text, "parse_mode": "HTML", "disable_web_page_preview": True},
             timeout=_REQUEST_TIMEOUT,
         )
         if resp.ok:
@@ -94,7 +96,7 @@ def send_telegram_document(file_content: str, filename: str, caption: str = "") 
         data = {"chat_id": chat_id}
         if caption:
             data["caption"] = caption
-            data["parse_mode"] = "Markdown"
+            data["parse_mode"] = "HTML"
 
         with open(tmp_path, "rb") as f:
             resp = requests.post(
