@@ -4,14 +4,14 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-05-09",
-    "total_runs": 83,
+    "total_runs": 84,
     "successful_scrapes": {
-      "nj_auti": 83,
-      "nj_kuce": 83,
-      "nj_stanovi": 83,
-      "idx_auti": 77,
+      "nj_auti": 84,
+      "nj_kuce": 84,
+      "nj_stanovi": 84,
+      "idx_auti": 78,
       "idx_kuce": 77,
-      "idx_stanovi": 76
+      "idx_stanovi": 77
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -28,7 +28,8 @@
         "08:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522270000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n",
         "09:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522270000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n",
         "09:17 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522270000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n",
-        "09:34 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522270000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n"
+        "09:34 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522270000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n",
+        "20:46 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522270000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n"
       ],
       "idx_stanovi": [
         "08:19 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n",
