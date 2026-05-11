@@ -4,7 +4,7 @@ import re
 
 from playwright.sync_api import sync_playwright, Page
 
-from providers.base import BaseProvider, ScrapeError
+from providers.base import BaseProvider, ScrapeError, ScrapeResult
 
 _COUNT_SELECTORS = [
     "[class*=count]",
@@ -53,6 +53,40 @@ class IndexProvider(BaseProvider):
             finally:
                 browser.close()
 
+        return self._parse_count(text, url)
+
+    def scrape(
+        self, categories: dict[str, str]
+    ) -> tuple[list[ScrapeResult], dict[str, str]]:
+        """Scrape all categories using a single browser instance."""
+        results: list[ScrapeResult] = []
+        errors: dict[str, str] = {}
+
+        with sync_playwright() as pw:
+            browser = pw.chromium.launch(headless=True)
+            try:
+                for name, url in categories.items():
+                    try:
+                        page = browser.new_page()
+                        page.goto(url, wait_until="networkidle", timeout=_NAV_TIMEOUT)
+
+                        text = _extract_from_selectors(page)
+                        if not text:
+                            text = _extract_from_text(page)
+                        page.close()
+
+                        count = self._parse_count(text, url)
+                        results.append(ScrapeResult(category=name, count=count, url=url))
+                    except Exception as exc:  # noqa: BLE001
+                        print(f"[ERROR] IndexProvider: failed to scrape '{name}': {exc}")
+                        errors[name] = str(exc)
+            finally:
+                browser.close()
+
+        return results, errors
+
+    @staticmethod
+    def _parse_count(text: str | None, url: str) -> int:
         if not text:
             raise ScrapeError(f"Count element not found on {url}")
 
