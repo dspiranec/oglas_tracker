@@ -4,14 +4,14 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-05-13",
-    "total_runs": 53,
+    "total_runs": 54,
     "successful_scrapes": {
-      "nj_auti": 53,
-      "nj_kuce": 53,
+      "nj_auti": 54,
+      "nj_kuce": 54,
       "nj_stanovi": 53,
-      "idx_auti": 52,
-      "idx_kuce": 52,
-      "idx_stanovi": 53
+      "idx_auti": 53,
+      "idx_kuce": 53,
+      "idx_stanovi": 54
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -19,6 +19,9 @@
       ],
       "idx_kuce": [
         "11:31 - Count element not found on https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522270000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D"
+      ],
+      "nj_stanovi": [
+        "13:16 - HTTPSConnectionPool(host='www.njuskalo.hr', port=443): Read timed out. (read timeout=15)"
       ]
     },
     "last_report_counts": {
