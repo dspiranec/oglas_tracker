@@ -3,15 +3,15 @@
   "kuce": 66,
   "stanovi": 78,
   "_stats": {
-    "date": "2026-05-21",
-    "total_runs": 95,
+    "date": "2026-05-22",
+    "total_runs": 1,
     "successful_scrapes": {
-      "nj_auti": 95,
-      "nj_kuce": 95,
-      "nj_stanovi": 95,
-      "idx_auti": 95,
-      "idx_kuce": 95,
-      "idx_stanovi": 95
+      "nj_auti": 1,
+      "nj_kuce": 1,
+      "nj_stanovi": 1,
+      "idx_auti": 1,
+      "idx_kuce": 1,
+      "idx_stanovi": 1
     },
     "failed_scrapes": {},
     "last_report_counts": {
@@ -25,7 +25,7 @@
       "idx_auti": 0,
       "idx_kuce": 31
     },
-    "report_sent": true
+    "report_sent": false
   },
   "nj_auti": 1,
   "nj_kuce": 61,
