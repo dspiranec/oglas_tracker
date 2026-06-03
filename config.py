@@ -18,7 +18,7 @@ NJUSKALO_CATEGORIES: dict[str, str] = {
     ),
     "nj_kuce": (
         "https://www.njuskalo.hr/prodaja-kuca"
-        "?price%5Bmax%5D=270000"
+        "?price%5Bmax%5D=340000"
         "&geo%5BlocationIds%5D=1731%2C1765%2C1766"
     ),
     "nj_stanovi": (
@@ -52,7 +52,7 @@ INDEX_CATEGORIES: dict[str, str] = {
         "?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522"
         "%252C%2522module%2522%253A%2522real-estate%2522"
         "%252C%2522areaFrom%2522%253A%252235%2522"
-        "%252C%2522priceTo%2522%253A%2522270000%2522"
+        "%252C%2522priceTo%2522%253A%2522340000%2522"
         "%252C%2522sortOption%2522%253A4"
         "%252C%2522includeCityIds%2522%253A%255B"
         "%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C"
