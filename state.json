@@ -3,24 +3,17 @@
   "kuce": 66,
   "stanovi": 78,
   "_stats": {
-    "date": "2026-06-13",
-    "total_runs": 96,
+    "date": "2026-06-14",
+    "total_runs": 1,
     "successful_scrapes": {
-      "nj_auti": 96,
-      "nj_kuce": 95,
-      "nj_stanovi": 95,
-      "idx_auti": 96,
-      "idx_kuce": 96,
-      "idx_stanovi": 96
+      "nj_auti": 1,
+      "nj_kuce": 1,
+      "nj_stanovi": 1,
+      "idx_auti": 1,
+      "idx_kuce": 1,
+      "idx_stanovi": 1
     },
-    "failed_scrapes": {
-      "nj_kuce": [
-        "19:16 - Selector 'strong.entities-count' not found on https://www.njuskalo.hr/prodaja-kuca?price%5Bmax%5D=340000&geo%5BlocationIds%5D=1731%2C1765%2C1766"
-      ],
-      "nj_stanovi": [
-        "19:16 - Selector 'strong.entities-count' not found on https://www.njuskalo.hr/prodaja-stanova?geo[locationIds]=1731,1765,1766&price[max]=240000&livingArea[min]=35"
-      ]
-    },
+    "failed_scrapes": {},
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
@@ -32,7 +25,7 @@
       "idx_auti": 0,
       "idx_kuce": 37
     },
-    "report_sent": true
+    "report_sent": false
   },
   "nj_auti": 2,
   "nj_kuce": 76,
