@@ -3,34 +3,38 @@
   "kuce": 66,
   "stanovi": 78,
   "_stats": {
-    "date": "2026-06-03",
-    "total_runs": 49,
+    "date": "2026-06-25",
+    "total_runs": 59,
     "successful_scrapes": {
-      "nj_auti": 49,
-      "nj_kuce": 49,
-      "nj_stanovi": 49,
-      "idx_auti": 49,
-      "idx_kuce": 49,
-      "idx_stanovi": 49
+      "nj_auti": 59,
+      "nj_kuce": 59,
+      "nj_stanovi": 59,
+      "idx_auti": 59,
+      "idx_stanovi": 59,
+      "idx_kuce": 58
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "idx_kuce": [
+        "00:01 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522340000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n"
+      ]
+    },
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
       "stanovi": 78,
-      "nj_auti": 1,
-      "nj_kuce": 64,
-      "nj_stanovi": 97,
-      "idx_stanovi": 58,
+      "nj_auti": 3,
+      "nj_kuce": 76,
+      "nj_stanovi": 102,
+      "idx_stanovi": 65,
       "idx_auti": 0,
-      "idx_kuce": 30
+      "idx_kuce": 37
     },
     "report_sent": false
   },
-  "nj_auti": 1,
-  "nj_kuce": 63,
-  "nj_stanovi": 98,
-  "idx_stanovi": 58,
+  "nj_auti": 3,
+  "nj_kuce": 76,
+  "nj_stanovi": 103,
+  "idx_stanovi": 66,
   "idx_auti": 0,
-  "idx_kuce": 30
+  "idx_kuce": 37
 }
