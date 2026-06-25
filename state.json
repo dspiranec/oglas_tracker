@@ -4,14 +4,14 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-06-25",
-    "total_runs": 58,
+    "total_runs": 59,
     "successful_scrapes": {
-      "nj_auti": 58,
-      "nj_kuce": 58,
-      "nj_stanovi": 58,
-      "idx_auti": 58,
-      "idx_stanovi": 58,
-      "idx_kuce": 57
+      "nj_auti": 59,
+      "nj_kuce": 59,
+      "nj_stanovi": 59,
+      "idx_auti": 59,
+      "idx_stanovi": 59,
+      "idx_kuce": 58
     },
     "failed_scrapes": {
       "idx_kuce": [
