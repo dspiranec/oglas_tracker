@@ -116,6 +116,8 @@ def build_daily_report(state: dict, current_counts: dict[str, int]) -> tuple[str
     groups = [
         ("Njuškalo", [c for c in CATEGORY_ORDER if c.startswith("nj_")]),
         ("Index", [c for c in CATEGORY_ORDER if c.startswith("idx_")]),
+        ("Plavi Oglasnik", [c for c in CATEGORY_ORDER if c.startswith("oglas_")]),
+        ("Bijelo Jaje", [c for c in CATEGORY_ORDER if c.startswith("bj_")]),
     ]
 
     for group_name, cats in groups:

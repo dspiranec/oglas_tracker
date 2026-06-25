@@ -72,7 +72,42 @@ INDEX_CATEGORIES: dict[str, str] = {
     ),
 }
 
-ALL_CATEGORIES: dict[str, str] = {**NJUSKALO_CATEGORIES, **INDEX_CATEGORIES}
+OGLASNIK_CATEGORIES: dict[str, str] = {
+    "oglas_stanovi": (
+        "https://oglasnik.hr/stanovi-prodaja"
+        "?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true"
+        "&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true"
+        "&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35"
+    ),
+    "oglas_kuce": (
+        "https://oglasnik.hr/kuce-prodaja"
+        "?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true"
+        "&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true"
+        "&f%5B2%5D%5Bmax%5D=340000"
+    ),
+}
+
+BIJELOJAJE_CATEGORIES: dict[str, str] = {
+    "bj_stanovi": (
+        "https://bijelojaje.dnevnik.hr/oglasi/nekretnine/stanovi/prodaja-stanova"
+        "/zagrebacka/brdovec~zapresic~zapresic-okolica/"
+        "?attributes=dYNjpNlAmRGuWrvT%7E_250000"
+        "%2CjnZdPJpcODuvrUwc%7E35_"
+        "%2CusCFcVXhcFekamWN%7E_&page=1"
+    ),
+    "bj_kuce": (
+        "https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca"
+        "/zagrebacka/zapresic~brdovec~zapresic-okolica/"
+        "?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1"
+    ),
+}
+
+ALL_CATEGORIES: dict[str, str] = {
+    **NJUSKALO_CATEGORIES,
+    **INDEX_CATEGORIES,
+    **OGLASNIK_CATEGORIES,
+    **BIJELOJAJE_CATEGORIES,
+}
 
 DISPLAY_NAMES: dict[str, str] = {
     "nj_auti": "Njuškalo Auti",
@@ -81,9 +116,15 @@ DISPLAY_NAMES: dict[str, str] = {
     "idx_auti": "Index Auti",
     "idx_kuce": "Index Kuće",
     "idx_stanovi": "Index Stanovi",
+    "oglas_stanovi": "Plavi Oglasnik Stanovi",
+    "oglas_kuce": "Plavi Oglasnik Kuće",
+    "bj_stanovi": "Bijelo Jaje Stanovi",
+    "bj_kuce": "Bijelo Jaje Kuće",
 }
 
 CATEGORY_ORDER: list[str] = [
     "nj_auti", "nj_kuce", "nj_stanovi",
     "idx_auti", "idx_kuce", "idx_stanovi",
+    "oglas_stanovi", "oglas_kuce",
+    "bj_stanovi", "bj_kuce",
 ]

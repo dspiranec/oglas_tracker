@@ -1,19 +1,27 @@
 """Oglas Tracker – main entry point.
 
-Scrapes configured ad categories from Njuškalo and Index Oglasi,
-detects count increases, sends Telegram notifications,
-and delivers a daily summary report at 21:00.
+Scrapes configured ad categories from Njuškalo, Index Oglasi,
+Plavi Oglasnik and Bijelo Jaje, detects count increases,
+sends Telegram notifications, and delivers a daily summary report at 21:00.
 """
 
 from __future__ import annotations
 
 import sys
 
-from config import INDEX_CATEGORIES, NJUSKALO_CATEGORIES, STATE_FILE
+from config import (
+    BIJELOJAJE_CATEGORIES,
+    INDEX_CATEGORIES,
+    NJUSKALO_CATEGORIES,
+    OGLASNIK_CATEGORIES,
+    STATE_FILE,
+)
 from notifier import Change, send_notification, send_telegram_document, send_telegram_message
 from providers.base import ScrapeResult
+from providers.bijelojaje import BijeloJajeProvider
 from providers.index import IndexProvider
 from providers.njuskalo import NjuskaloProvider
+from providers.oglasnik import OglasnikProvider
 from state import get_counts, load_state, save_state
 from stats import (
     build_daily_report,
@@ -33,8 +41,14 @@ def run() -> None:
     index = IndexProvider()
     idx_results, idx_errors = index.scrape(INDEX_CATEGORIES)
 
-    results: list[ScrapeResult] = nj_results + idx_results
-    errors: dict[str, str] = {**nj_errors, **idx_errors}
+    oglasnik = OglasnikProvider()
+    oglas_results, oglas_errors = oglasnik.scrape(OGLASNIK_CATEGORIES)
+
+    bijelojaje = BijeloJajeProvider()
+    bj_results, bj_errors = bijelojaje.scrape(BIJELOJAJE_CATEGORIES)
+
+    results: list[ScrapeResult] = nj_results + idx_results + oglas_results + bj_results
+    errors: dict[str, str] = {**nj_errors, **idx_errors, **oglas_errors, **bj_errors}
 
     state = load_state(STATE_FILE)
     state = ensure_stats(state)
