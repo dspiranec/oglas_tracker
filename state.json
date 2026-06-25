@@ -4,22 +4,28 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-06-25",
-    "total_runs": 94,
+    "total_runs": 95,
     "successful_scrapes": {
-      "nj_auti": 94,
-      "nj_kuce": 94,
-      "nj_stanovi": 94,
-      "idx_auti": 94,
-      "idx_stanovi": 94,
-      "idx_kuce": 93,
+      "nj_auti": 95,
+      "nj_kuce": 95,
+      "nj_stanovi": 95,
+      "idx_auti": 95,
+      "idx_stanovi": 95,
+      "idx_kuce": 94,
       "oglas_stanovi": 35,
-      "oglas_kuce": 35,
-      "bj_stanovi": 35,
+      "oglas_kuce": 36,
+      "bj_stanovi": 36,
       "bj_kuce": 35
     },
     "failed_scrapes": {
       "idx_kuce": [
         "00:01 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522340000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n"
+      ],
+      "oglas_stanovi": [
+        "23:31 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
+      ],
+      "bj_kuce": [
+        "23:31 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1"
       ]
     },
     "last_report_counts": {
