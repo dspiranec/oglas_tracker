@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-06-29",
-    "total_runs": 40,
+    "total_runs": 41,
     "successful_scrapes": {
-      "nj_auti": 40,
-      "nj_kuce": 40,
-      "nj_stanovi": 40,
+      "nj_auti": 41,
+      "nj_kuce": 41,
+      "nj_stanovi": 41,
       "idx_auti": 40,
-      "idx_kuce": 40,
-      "idx_stanovi": 40,
-      "oglas_stanovi": 39,
-      "oglas_kuce": 39,
-      "bj_stanovi": 40,
-      "bj_kuce": 40
+      "idx_kuce": 41,
+      "idx_stanovi": 41,
+      "oglas_stanovi": 40,
+      "oglas_kuce": 40,
+      "bj_stanovi": 41,
+      "bj_kuce": 41
     },
     "failed_scrapes": {
       "oglas_stanovi": [
@@ -23,6 +23,9 @@
       ],
       "oglas_kuce": [
         "01:16 - Count pattern not found on https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000"
+      ],
+      "idx_auti": [
+        "10:01 - Count element not found on https://www.index.hr/oglasi/auto-moto/osobni-automobili/pretraga?searchQuery=%257B%2522category%2522%253A%2522osobni-automobili%2522%252C%2522makeYearFrom%2522%253A%25222009-12-31T23%253A00%253A00.000Z%2522%252C%2522fuelIds%2522%253A%255B2%255D%252C%2522powerFrom%2522%253A%252270%2522%252C%2522mileageTo%2522%253A%2522150000%2522%252C%2522cubicCapacityFrom%2522%253A%25221250%2522%252C%2522includeModelIds%2522%253A%255B%252221b4202e-abde-4e34-9f43-884af625e3bc%2522%252C%252205c67747-4f2a-4200-8b0f-ab71d677e170%2522%252C%2522d2226767-fcc2-4499-bfb1-d13da462f2cc%2522%252C%25224735081f-848a-4a6d-8fa2-1cde1843705f%2522%255D%252C%2522sortOption%2522%253A4%252C%2522module%2522%253A%2522auto-moto%2522%252C%2522priceTo%2522%253A%252210000%2522%257D"
       ]
     },
     "last_report_counts": {
@@ -44,7 +47,7 @@
   },
   "nj_auti": 3,
   "nj_kuce": 75,
-  "nj_stanovi": 103,
+  "nj_stanovi": 102,
   "idx_stanovi": 65,
   "idx_auti": 1,
   "idx_kuce": 38,
