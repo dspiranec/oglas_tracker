@@ -4,22 +4,25 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-01",
-    "total_runs": 2,
+    "total_runs": 3,
     "successful_scrapes": {
-      "nj_auti": 2,
-      "nj_kuce": 2,
-      "nj_stanovi": 2,
-      "idx_auti": 2,
-      "idx_kuce": 2,
-      "idx_stanovi": 2,
-      "oglas_stanovi": 2,
-      "oglas_kuce": 2,
+      "nj_auti": 3,
+      "nj_kuce": 3,
+      "nj_stanovi": 3,
+      "idx_auti": 3,
+      "idx_kuce": 3,
+      "idx_stanovi": 3,
+      "oglas_stanovi": 3,
+      "oglas_kuce": 3,
       "bj_kuce": 2,
-      "bj_stanovi": 1
+      "bj_stanovi": 2
     },
     "failed_scrapes": {
       "bj_stanovi": [
         "00:01 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/stanovi/prodaja-stanova/zagrebacka/brdovec~zapresic~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_250000%2CjnZdPJpcODuvrUwc%7E35_%2CusCFcVXhcFekamWN%7E_&page=1"
+      ],
+      "bj_kuce": [
+        "00:31 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1"
       ]
     },
     "last_report_counts": {
