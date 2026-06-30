@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-06-30",
-    "total_runs": 93,
+    "total_runs": 94,
     "successful_scrapes": {
-      "nj_auti": 93,
-      "nj_kuce": 93,
-      "nj_stanovi": 92,
-      "idx_auti": 93,
-      "idx_kuce": 93,
-      "idx_stanovi": 93,
+      "nj_auti": 94,
+      "nj_kuce": 94,
+      "nj_stanovi": 93,
+      "idx_auti": 94,
+      "idx_kuce": 94,
+      "idx_stanovi": 94,
       "oglas_stanovi": 93,
       "oglas_kuce": 93,
-      "bj_stanovi": 93,
-      "bj_kuce": 92
+      "bj_stanovi": 94,
+      "bj_kuce": 93
     },
     "failed_scrapes": {
       "bj_kuce": [
@@ -23,6 +23,12 @@
       ],
       "nj_stanovi": [
         "20:46 - Selector 'strong.entities-count' not found on https://www.njuskalo.hr/prodaja-stanova?geo[locationIds]=1731,1765,1766&price[max]=240000&livingArea[min]=35"
+      ],
+      "oglas_stanovi": [
+        "23:16 - Count pattern not found on https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35"
+      ],
+      "oglas_kuce": [
+        "23:16 - Count pattern not found on https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000"
       ]
     },
     "last_report_counts": {
