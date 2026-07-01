@@ -4,25 +4,26 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-01",
-    "total_runs": 56,
+    "total_runs": 57,
     "successful_scrapes": {
-      "nj_auti": 56,
-      "nj_kuce": 56,
-      "nj_stanovi": 56,
-      "idx_auti": 56,
-      "idx_kuce": 56,
-      "idx_stanovi": 56,
-      "oglas_stanovi": 56,
-      "oglas_kuce": 56,
+      "nj_auti": 57,
+      "nj_kuce": 57,
+      "nj_stanovi": 57,
+      "idx_auti": 57,
+      "idx_kuce": 57,
+      "idx_stanovi": 57,
+      "oglas_stanovi": 57,
+      "oglas_kuce": 57,
       "bj_kuce": 55,
-      "bj_stanovi": 55
+      "bj_stanovi": 56
     },
     "failed_scrapes": {
       "bj_stanovi": [
         "00:01 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/stanovi/prodaja-stanova/zagrebacka/brdovec~zapresic~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_250000%2CjnZdPJpcODuvrUwc%7E35_%2CusCFcVXhcFekamWN%7E_&page=1"
       ],
       "bj_kuce": [
-        "00:31 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1"
+        "00:31 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1",
+        "14:01 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1"
       ]
     },
     "last_report_counts": {
