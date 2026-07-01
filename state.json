@@ -4,20 +4,24 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-02",
-    "total_runs": 1,
+    "total_runs": 2,
     "successful_scrapes": {
       "nj_auti": 1,
-      "nj_kuce": 1,
-      "nj_stanovi": 1,
-      "idx_auti": 1,
-      "idx_kuce": 1,
-      "idx_stanovi": 1,
-      "oglas_stanovi": 1,
-      "oglas_kuce": 1,
-      "bj_stanovi": 1,
-      "bj_kuce": 1
+      "nj_kuce": 2,
+      "nj_stanovi": 2,
+      "idx_auti": 2,
+      "idx_kuce": 2,
+      "idx_stanovi": 2,
+      "oglas_stanovi": 2,
+      "oglas_kuce": 2,
+      "bj_stanovi": 2,
+      "bj_kuce": 2
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "nj_auti": [
+        "00:16 - HTTPSConnectionPool(host='www.njuskalo.hr', port=443): Max retries exceeded with url: /rabljeni-auti?vehicleIds=11710,11727,12945,15414&price%5Bmin%5D=1000&price%5Bmax%5D=10000&yearManufactured%5Bmin%5D=2010&adsWithImages=1&fuelTypeId=600&motorSize%5Bmin%5D=1250&motorPower%5Bmin%5D=70&mileage%5Bmax%5D=150000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.njuskalo.hr', port=443) at 0x7faa0bbe1b90>, 'Connection to www.njuskalo.hr timed out. (connect timeout=15)'))"
+      ]
+    },
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
@@ -36,7 +40,7 @@
     "report_sent": false
   },
   "nj_auti": 3,
-  "nj_kuce": 75,
+  "nj_kuce": 73,
   "nj_stanovi": 104,
   "idx_stanovi": 65,
   "idx_auti": 1,
