@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-01",
-    "total_runs": 67,
+    "total_runs": 68,
     "successful_scrapes": {
-      "nj_auti": 67,
-      "nj_kuce": 67,
-      "nj_stanovi": 67,
-      "idx_auti": 67,
-      "idx_kuce": 67,
-      "idx_stanovi": 67,
+      "nj_auti": 68,
+      "nj_kuce": 68,
+      "nj_stanovi": 68,
+      "idx_auti": 68,
+      "idx_kuce": 68,
+      "idx_stanovi": 68,
       "oglas_stanovi": 67,
       "oglas_kuce": 67,
-      "bj_kuce": 65,
-      "bj_stanovi": 66
+      "bj_kuce": 66,
+      "bj_stanovi": 67
     },
     "failed_scrapes": {
       "bj_stanovi": [
@@ -24,6 +24,12 @@
       "bj_kuce": [
         "00:31 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1",
         "14:01 - Count pattern not found on https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT%7E_340000&page=1"
+      ],
+      "oglas_stanovi": [
+        "16:46 - Count pattern not found on https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35"
+      ],
+      "oglas_kuce": [
+        "16:46 - Count pattern not found on https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000"
       ]
     },
     "last_report_counts": {
