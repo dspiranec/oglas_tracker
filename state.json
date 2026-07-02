@@ -3,37 +3,21 @@
   "kuce": 66,
   "stanovi": 78,
   "_stats": {
-    "date": "2026-07-02",
-    "total_runs": 96,
+    "date": "2026-07-03",
+    "total_runs": 1,
     "successful_scrapes": {
-      "nj_auti": 95,
-      "nj_kuce": 96,
-      "nj_stanovi": 96,
-      "idx_auti": 96,
-      "idx_kuce": 95,
-      "idx_stanovi": 95,
-      "oglas_stanovi": 95,
-      "oglas_kuce": 95,
-      "bj_stanovi": 96,
-      "bj_kuce": 96
+      "nj_auti": 1,
+      "nj_kuce": 1,
+      "nj_stanovi": 1,
+      "idx_auti": 1,
+      "idx_kuce": 1,
+      "idx_stanovi": 1,
+      "oglas_stanovi": 1,
+      "oglas_kuce": 1,
+      "bj_stanovi": 1,
+      "bj_kuce": 1
     },
-    "failed_scrapes": {
-      "nj_auti": [
-        "00:16 - HTTPSConnectionPool(host='www.njuskalo.hr', port=443): Max retries exceeded with url: /rabljeni-auti?vehicleIds=11710,11727,12945,15414&price%5Bmin%5D=1000&price%5Bmax%5D=10000&yearManufactured%5Bmin%5D=2010&adsWithImages=1&fuelTypeId=600&motorSize%5Bmin%5D=1250&motorPower%5Bmin%5D=70&mileage%5Bmax%5D=150000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.njuskalo.hr', port=443) at 0x7faa0bbe1b90>, 'Connection to www.njuskalo.hr timed out. (connect timeout=15)'))"
-      ],
-      "idx_kuce": [
-        "08:48 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522340000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n"
-      ],
-      "idx_stanovi": [
-        "08:48 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n"
-      ],
-      "oglas_stanovi": [
-        "08:48 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
-      ],
-      "oglas_kuce": [
-        "08:48 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000\", waiting until \"networkidle\"\n"
-      ]
-    },
+    "failed_scrapes": {},
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
@@ -49,7 +33,7 @@
       "bj_stanovi": 19,
       "bj_kuce": 19
     },
-    "report_sent": true
+    "report_sent": false
   },
   "nj_auti": 3,
   "nj_kuce": 72,
@@ -59,6 +43,6 @@
   "idx_kuce": 39,
   "oglas_stanovi": 53,
   "oglas_kuce": 26,
-  "bj_stanovi": 19,
+  "bj_stanovi": 18,
   "bj_kuce": 19
 }
