@@ -4,22 +4,25 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-03",
-    "total_runs": 49,
+    "total_runs": 50,
     "successful_scrapes": {
-      "nj_auti": 49,
+      "nj_auti": 50,
       "nj_kuce": 49,
-      "nj_stanovi": 49,
-      "idx_auti": 49,
-      "idx_kuce": 49,
-      "idx_stanovi": 48,
-      "oglas_stanovi": 49,
-      "oglas_kuce": 49,
-      "bj_stanovi": 49,
-      "bj_kuce": 49
+      "nj_stanovi": 50,
+      "idx_auti": 50,
+      "idx_kuce": 50,
+      "idx_stanovi": 49,
+      "oglas_stanovi": 50,
+      "oglas_kuce": 50,
+      "bj_stanovi": 50,
+      "bj_kuce": 50
     },
     "failed_scrapes": {
       "idx_stanovi": [
         "02:16 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n"
+      ],
+      "nj_kuce": [
+        "12:16 - HTTPSConnectionPool(host='www.njuskalo.hr', port=443): Read timed out. (read timeout=15)"
       ]
     },
     "last_report_counts": {
