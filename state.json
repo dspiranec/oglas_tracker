@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-06",
-    "total_runs": 83,
+    "total_runs": 84,
     "successful_scrapes": {
-      "nj_auti": 83,
-      "nj_kuce": 83,
-      "nj_stanovi": 83,
-      "idx_auti": 82,
-      "idx_kuce": 83,
-      "idx_stanovi": 83,
-      "oglas_stanovi": 82,
-      "oglas_kuce": 82,
-      "bj_stanovi": 83,
-      "bj_kuce": 83
+      "nj_auti": 84,
+      "nj_kuce": 84,
+      "nj_stanovi": 84,
+      "idx_auti": 83,
+      "idx_kuce": 84,
+      "idx_stanovi": 84,
+      "oglas_stanovi": 83,
+      "oglas_kuce": 83,
+      "bj_stanovi": 84,
+      "bj_kuce": 84
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -33,8 +33,8 @@
       "kuce": 66,
       "stanovi": 78,
       "nj_auti": 3,
-      "nj_kuce": 71,
-      "nj_stanovi": 110,
+      "nj_kuce": 72,
+      "nj_stanovi": 111,
       "idx_stanovi": 67,
       "idx_auti": 1,
       "idx_kuce": 39,
@@ -43,7 +43,7 @@
       "bj_stanovi": 18,
       "bj_kuce": 19
     },
-    "report_sent": false
+    "report_sent": true
   },
   "nj_auti": 3,
   "nj_kuce": 72,
