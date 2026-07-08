@@ -4,20 +4,30 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-08",
-    "total_runs": 35,
+    "total_runs": 36,
     "successful_scrapes": {
       "nj_auti": 35,
       "nj_kuce": 35,
       "nj_stanovi": 35,
-      "idx_auti": 35,
-      "idx_kuce": 35,
-      "idx_stanovi": 35,
-      "oglas_stanovi": 35,
-      "oglas_kuce": 35,
-      "bj_stanovi": 35,
-      "bj_kuce": 35
+      "idx_auti": 36,
+      "idx_kuce": 36,
+      "idx_stanovi": 36,
+      "oglas_stanovi": 36,
+      "oglas_kuce": 36,
+      "bj_stanovi": 36,
+      "bj_kuce": 36
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "nj_auti": [
+        "08:46 - 500 Server Error: Internal Server Error for url: https://www.njuskalo.hr/rabljeni-auti?vehicleIds=11710,11727,12945,15414&price%5Bmin%5D=1000&price%5Bmax%5D=10000&yearManufactured%5Bmin%5D=2010&adsWithImages=1&fuelTypeId=600&motorSize%5Bmin%5D=1250&motorPower%5Bmin%5D=70&mileage%5Bmax%5D=150000"
+      ],
+      "nj_kuce": [
+        "08:46 - HTTPSConnectionPool(host='www.njuskalo.hr', port=443): Read timed out. (read timeout=15)"
+      ],
+      "nj_stanovi": [
+        "08:46 - HTTPSConnectionPool(host='www.njuskalo.hr', port=443): Read timed out. (read timeout=15)"
+      ]
+    },
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
