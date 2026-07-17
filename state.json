@@ -4,20 +4,27 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-17",
-    "total_runs": 28,
+    "total_runs": 29,
     "successful_scrapes": {
-      "nj_auti": 28,
-      "nj_kuce": 28,
-      "nj_stanovi": 28,
-      "idx_auti": 28,
-      "idx_kuce": 28,
-      "idx_stanovi": 28,
+      "nj_auti": 29,
+      "nj_kuce": 29,
+      "nj_stanovi": 29,
+      "idx_auti": 29,
+      "idx_kuce": 29,
+      "idx_stanovi": 29,
       "oglas_stanovi": 28,
       "oglas_kuce": 28,
-      "bj_stanovi": 28,
-      "bj_kuce": 28
+      "bj_stanovi": 29,
+      "bj_kuce": 29
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "oglas_stanovi": [
+        "07:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
+      ],
+      "oglas_kuce": [
+        "07:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000\", waiting until \"networkidle\"\n"
+      ]
+    },
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
