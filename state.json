@@ -4,20 +4,27 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-18",
-    "total_runs": 47,
+    "total_runs": 48,
     "successful_scrapes": {
-      "nj_auti": 47,
-      "nj_kuce": 47,
-      "nj_stanovi": 47,
-      "idx_auti": 47,
-      "idx_kuce": 47,
-      "idx_stanovi": 47,
+      "nj_auti": 48,
+      "nj_kuce": 48,
+      "nj_stanovi": 48,
+      "idx_auti": 48,
+      "idx_kuce": 48,
+      "idx_stanovi": 48,
       "oglas_stanovi": 47,
       "oglas_kuce": 47,
-      "bj_stanovi": 47,
-      "bj_kuce": 47
+      "bj_stanovi": 48,
+      "bj_kuce": 48
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "oglas_stanovi": [
+        "11:46 - Count pattern not found on https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35"
+      ],
+      "oglas_kuce": [
+        "11:46 - Count pattern not found on https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000"
+      ]
+    },
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
