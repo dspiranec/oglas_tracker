@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-19",
-    "total_runs": 52,
+    "total_runs": 53,
     "successful_scrapes": {
-      "nj_auti": 52,
-      "nj_kuce": 52,
-      "nj_stanovi": 52,
-      "idx_auti": 52,
-      "idx_kuce": 52,
-      "idx_stanovi": 52,
-      "oglas_stanovi": 52,
-      "oglas_kuce": 52,
-      "bj_stanovi": 52,
-      "bj_kuce": 52
+      "nj_auti": 53,
+      "nj_kuce": 53,
+      "nj_stanovi": 53,
+      "idx_auti": 53,
+      "idx_kuce": 53,
+      "idx_stanovi": 53,
+      "oglas_stanovi": 53,
+      "oglas_kuce": 53,
+      "bj_stanovi": 53,
+      "bj_kuce": 53
     },
     "failed_scrapes": {},
     "last_report_counts": {
