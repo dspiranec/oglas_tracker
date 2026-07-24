@@ -4,22 +4,28 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-24",
-    "total_runs": 56,
+    "total_runs": 57,
     "successful_scrapes": {
-      "nj_auti": 56,
-      "nj_kuce": 56,
-      "nj_stanovi": 56,
-      "idx_auti": 56,
-      "idx_kuce": 56,
-      "idx_stanovi": 56,
+      "nj_auti": 57,
+      "nj_kuce": 57,
+      "nj_stanovi": 57,
+      "idx_auti": 57,
+      "idx_kuce": 57,
+      "idx_stanovi": 57,
       "oglas_stanovi": 56,
       "oglas_kuce": 56,
-      "bj_stanovi": 56,
-      "bj_kuce": 55
+      "bj_stanovi": 57,
+      "bj_kuce": 56
     },
     "failed_scrapes": {
       "bj_kuce": [
         "01:16 - 409 Client Error: Conflict for url: https://bijelojaje.dnevnik.hr/oglasi/nekretnine/kuce/prodaja-kuca/zagrebacka/zapresic~brdovec~zapresic-okolica/?attributes=dYNjpNlAmRGuWrvT~_340000&page=1"
+      ],
+      "oglas_stanovi": [
+        "14:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
+      ],
+      "oglas_kuce": [
+        "14:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000\", waiting until \"networkidle\"\n"
       ]
     },
     "last_report_counts": {
