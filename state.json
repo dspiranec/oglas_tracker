@@ -4,22 +4,28 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-07-28",
-    "total_runs": 69,
+    "total_runs": 70,
     "successful_scrapes": {
-      "nj_auti": 69,
-      "nj_kuce": 69,
-      "nj_stanovi": 69,
-      "idx_auti": 69,
-      "idx_kuce": 68,
-      "idx_stanovi": 69,
+      "nj_auti": 70,
+      "nj_kuce": 70,
+      "nj_stanovi": 70,
+      "idx_auti": 70,
+      "idx_kuce": 69,
+      "idx_stanovi": 70,
       "oglas_stanovi": 69,
       "oglas_kuce": 69,
-      "bj_stanovi": 69,
-      "bj_kuce": 69
+      "bj_stanovi": 70,
+      "bj_kuce": 70
     },
     "failed_scrapes": {
       "idx_kuce": [
         "02:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/prodaja-kuca/pretraga?searchQuery=%257B%2522category%2522%253A%2522houses-for-sale%2522%252C%2522module%2522%253A%2522real-estate%2522%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522340000%2522%252C%2522sortOption%2522%253A4%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%257D\", waiting until \"networkidle\"\n"
+      ],
+      "oglas_stanovi": [
+        "17:16 - Count pattern not found on https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35"
+      ],
+      "oglas_kuce": [
+        "17:16 - Count pattern not found on https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000"
       ]
     },
     "last_report_counts": {
