@@ -68,6 +68,10 @@ def should_send_report(state: dict) -> bool:
     stats = state.get("_stats", {})
     if stats.get("report_sent", False):
         return False
+    failed = stats.get("failed_scrapes", {})
+    total_failures = sum(len(v) for v in failed.values())
+    if total_failures <= 6:
+        return False
     h, m = _now_hour(), _now_minute()
     return (h > _REPORT_HOUR) or (h == _REPORT_HOUR and m >= _REPORT_MINUTE_FROM)
 
