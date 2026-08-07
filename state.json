@@ -4,25 +4,27 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-08-07",
-    "total_runs": 25,
+    "total_runs": 26,
     "successful_scrapes": {
-      "nj_auti": 25,
-      "nj_kuce": 25,
-      "nj_stanovi": 25,
-      "idx_auti": 25,
-      "idx_kuce": 25,
-      "idx_stanovi": 25,
+      "nj_auti": 26,
+      "nj_kuce": 26,
+      "nj_stanovi": 26,
+      "idx_auti": 26,
+      "idx_kuce": 26,
+      "idx_stanovi": 26,
       "oglas_stanovi": 24,
       "oglas_kuce": 24,
-      "bj_stanovi": 25,
-      "bj_kuce": 25
+      "bj_stanovi": 26,
+      "bj_kuce": 26
     },
     "failed_scrapes": {
       "oglas_stanovi": [
-        "06:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
+        "06:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n",
+        "07:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
       ],
       "oglas_kuce": [
-        "06:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000\", waiting until \"networkidle\"\n"
+        "06:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000\", waiting until \"networkidle\"\n",
+        "07:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000\", waiting until \"networkidle\"\n"
       ]
     },
     "last_report_counts": {
