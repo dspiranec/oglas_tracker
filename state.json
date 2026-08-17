@@ -4,20 +4,24 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-08-18",
-    "total_runs": 2,
+    "total_runs": 3,
     "successful_scrapes": {
-      "nj_auti": 2,
-      "nj_kuce": 2,
-      "nj_stanovi": 2,
-      "idx_auti": 2,
-      "idx_kuce": 2,
-      "idx_stanovi": 2,
-      "oglas_stanovi": 2,
-      "oglas_kuce": 2,
+      "nj_auti": 3,
+      "nj_kuce": 3,
+      "nj_stanovi": 3,
+      "idx_auti": 3,
+      "idx_kuce": 3,
+      "idx_stanovi": 3,
+      "oglas_stanovi": 3,
+      "oglas_kuce": 3,
       "bj_stanovi": 2,
-      "bj_kuce": 2
+      "bj_kuce": 3
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "bj_stanovi": [
+        "00:31 - HTTPSConnectionPool(host='bijelojaje.dnevnik.hr', port=443): Read timed out. (read timeout=15)"
+      ]
+    },
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
