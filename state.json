@@ -3,25 +3,21 @@
   "kuce": 66,
   "stanovi": 78,
   "_stats": {
-    "date": "2026-08-20",
-    "total_runs": 95,
+    "date": "2026-08-21",
+    "total_runs": 1,
     "successful_scrapes": {
-      "nj_auti": 95,
-      "nj_kuce": 94,
-      "nj_stanovi": 95,
-      "idx_auti": 95,
-      "idx_kuce": 95,
-      "idx_stanovi": 95,
-      "oglas_stanovi": 95,
-      "oglas_kuce": 95,
-      "bj_stanovi": 95,
-      "bj_kuce": 95
+      "nj_auti": 1,
+      "nj_kuce": 1,
+      "nj_stanovi": 1,
+      "idx_auti": 1,
+      "idx_kuce": 1,
+      "idx_stanovi": 1,
+      "oglas_stanovi": 1,
+      "oglas_kuce": 1,
+      "bj_stanovi": 1,
+      "bj_kuce": 1
     },
-    "failed_scrapes": {
-      "nj_kuce": [
-        "09:16 - HTTPSConnectionPool(host='www.njuskalo.hr', port=443): Read timed out. (read timeout=15)"
-      ]
-    },
+    "failed_scrapes": {},
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
