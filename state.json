@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-08-22",
-    "total_runs": 92,
+    "total_runs": 93,
     "successful_scrapes": {
-      "nj_auti": 92,
-      "nj_kuce": 92,
-      "nj_stanovi": 92,
-      "idx_auti": 91,
-      "idx_kuce": 91,
-      "idx_stanovi": 91,
+      "nj_auti": 93,
+      "nj_kuce": 93,
+      "nj_stanovi": 93,
+      "idx_auti": 92,
+      "idx_kuce": 92,
+      "idx_stanovi": 92,
       "oglas_stanovi": 82,
-      "oglas_kuce": 83,
-      "bj_stanovi": 92,
-      "bj_kuce": 92
+      "oglas_kuce": 84,
+      "bj_stanovi": 93,
+      "bj_kuce": 93
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -37,7 +37,8 @@
         "21:17 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n",
         "21:32 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n",
         "21:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n",
-        "22:32 - Count pattern not found on https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35"
+        "22:32 - Count pattern not found on https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35",
+        "23:02 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
       ],
       "oglas_kuce": [
         "19:31 - Count pattern not found on https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000",
