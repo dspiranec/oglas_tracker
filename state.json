@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-08-25",
-    "total_runs": 93,
+    "total_runs": 94,
     "successful_scrapes": {
-      "nj_auti": 93,
-      "nj_kuce": 93,
-      "nj_stanovi": 93,
-      "idx_auti": 91,
-      "idx_kuce": 91,
+      "nj_auti": 94,
+      "nj_kuce": 94,
+      "nj_stanovi": 94,
+      "idx_auti": 92,
+      "idx_kuce": 92,
       "idx_stanovi": 91,
-      "oglas_stanovi": 92,
-      "oglas_kuce": 92,
-      "bj_stanovi": 93,
-      "bj_kuce": 93
+      "oglas_stanovi": 93,
+      "oglas_kuce": 93,
+      "bj_stanovi": 94,
+      "bj_kuce": 94
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -28,7 +28,8 @@
       ],
       "idx_stanovi": [
         "03:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n",
-        "18:17 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n"
+        "18:17 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n",
+        "23:32 - Count element not found on https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D"
       ],
       "oglas_stanovi": [
         "05:31 - Count pattern not found on https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35"
