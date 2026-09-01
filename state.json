@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-09-01",
-    "total_runs": 27,
+    "total_runs": 28,
     "successful_scrapes": {
-      "nj_auti": 27,
-      "nj_kuce": 27,
-      "nj_stanovi": 27,
-      "idx_auti": 26,
-      "idx_kuce": 26,
-      "idx_stanovi": 26,
+      "nj_auti": 28,
+      "nj_kuce": 28,
+      "nj_stanovi": 28,
+      "idx_auti": 27,
+      "idx_kuce": 27,
+      "idx_stanovi": 27,
       "oglas_stanovi": 27,
       "oglas_kuce": 27,
-      "bj_stanovi": 27,
-      "bj_kuce": 27
+      "bj_stanovi": 28,
+      "bj_kuce": 28
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -26,6 +26,12 @@
       ],
       "idx_stanovi": [
         "02:03 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n"
+      ],
+      "oglas_stanovi": [
+        "06:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
+      ],
+      "oglas_kuce": [
+        "06:47 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000\", waiting until \"networkidle\"\n"
       ]
     },
     "last_report_counts": {
