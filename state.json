@@ -4,18 +4,18 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-09-02",
-    "total_runs": 84,
+    "total_runs": 85,
     "successful_scrapes": {
-      "nj_auti": 84,
-      "nj_kuce": 84,
-      "nj_stanovi": 84,
-      "oglas_stanovi": 84,
-      "oglas_kuce": 84,
-      "bj_stanovi": 84,
+      "nj_auti": 85,
+      "nj_kuce": 85,
+      "nj_stanovi": 85,
+      "oglas_stanovi": 85,
+      "oglas_kuce": 85,
+      "bj_stanovi": 85,
       "bj_kuce": 84,
-      "idx_auti": 81,
-      "idx_kuce": 82,
-      "idx_stanovi": 81
+      "idx_auti": 82,
+      "idx_kuce": 83,
+      "idx_stanovi": 82
     },
     "failed_scrapes": {
       "idx_auti": [
@@ -31,24 +31,27 @@
         "00:03 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n",
         "11:33 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D\", waiting until \"networkidle\"\n",
         "15:46 - Count element not found on https://www.index.hr/oglasi/nekretnine/flats-for-sale/pretraga?searchQuery=%257B%2522category%2522%253A%2522flats-for-sale%2522%252C%2522module%2522%253A%2522nekretnine%2522%252C%2522includeCityIds%2522%253A%255B%252233670252-7421-44f2-81fa-c13e2d7c971f%2522%252C%2522e0eefd1c-9cb5-41ee-a435-2bca97550031%2522%255D%252C%2522areaFrom%2522%253A%252235%2522%252C%2522priceTo%2522%253A%2522240000%2522%252C%2522sortOption%2522%253A4%252C%2522page%2522%253A1%257D"
+      ],
+      "bj_kuce": [
+        "21:01 - Response ended prematurely"
       ]
     },
     "last_report_counts": {
       "auti": 1,
       "kuce": 66,
       "stanovi": 78,
-      "nj_auti": 1,
-      "nj_kuce": 60,
-      "nj_stanovi": 107,
-      "idx_stanovi": 63,
+      "nj_auti": 2,
+      "nj_kuce": 62,
+      "nj_stanovi": 105,
+      "idx_stanovi": 61,
       "idx_auti": 0,
       "idx_kuce": 32,
-      "oglas_stanovi": 46,
-      "oglas_kuce": 17,
-      "bj_stanovi": 16,
-      "bj_kuce": 11
+      "oglas_stanovi": 45,
+      "oglas_kuce": 18,
+      "bj_stanovi": 15,
+      "bj_kuce": 12
     },
-    "report_sent": false
+    "report_sent": true
   },
   "nj_auti": 2,
   "nj_kuce": 62,
