@@ -13,10 +13,8 @@ _TELEGRAM_API = "https://api.telegram.org/bot{token}/{method}"
 _REQUEST_TIMEOUT = 10
 
 EMOJI_MAP: dict[str, str] = {
-    "nj_auti": "\U0001F697",
     "nj_kuce": "\U0001F3E0",
     "nj_stanovi": "\U0001F3E2",
-    "idx_auti": "\U0001F697",
     "idx_kuce": "\U0001F3E0",
     "idx_stanovi": "\U0001F3E2",
     "oglas_stanovi": "\U0001F3E2",

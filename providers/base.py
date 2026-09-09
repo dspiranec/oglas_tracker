@@ -26,7 +26,7 @@ class BaseProvider(ABC):
     ) -> tuple[list[ScrapeResult], dict[str, str]]:
         """Scrape all *categories* and return results + errors.
 
-        *categories* maps a human-readable name (e.g. ``"auti"``) to a URL.
+        *categories* maps a human-readable name (e.g. ``"stanovi"``) to a URL.
         Individual failures are logged but never stop the remaining categories.
 
         Returns a tuple of (successful_results, errors_dict).
