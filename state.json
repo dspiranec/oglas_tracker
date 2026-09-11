@@ -3,18 +3,25 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-09-11",
-    "total_runs": 27,
+    "total_runs": 28,
     "successful_scrapes": {
-      "nj_kuce": 27,
-      "nj_stanovi": 27,
-      "idx_kuce": 27,
-      "idx_stanovi": 27,
+      "nj_kuce": 28,
+      "nj_stanovi": 28,
+      "idx_kuce": 28,
+      "idx_stanovi": 28,
       "oglas_stanovi": 27,
       "oglas_kuce": 27,
-      "bj_stanovi": 27,
-      "bj_kuce": 27
+      "bj_stanovi": 28,
+      "bj_kuce": 28
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "oglas_stanovi": [
+        "06:46 - Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://oglasnik.hr/stanovi-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=250000&f%5B44%5D%5Bmin%5D=35\", waiting until \"networkidle\"\n"
+      ],
+      "oglas_kuce": [
+        "06:46 - Count pattern not found on https://oglasnik.hr/kuce-prodaja?f%5B4%5D%5B7760%5D=true&f%5B4%5D%5B7790%5D=true&f%5B4%5D%5B8495%5D=true&f%5B4%5D%5B8526%5D=true&f%5B2%5D%5Bmax%5D=340000"
+      ]
+    },
     "last_report_counts": {
       "kuce": 66,
       "stanovi": 78,
