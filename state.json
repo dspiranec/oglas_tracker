@@ -3,18 +3,25 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-09-15",
-    "total_runs": 49,
+    "total_runs": 50,
     "successful_scrapes": {
       "nj_kuce": 49,
       "nj_stanovi": 49,
-      "idx_kuce": 49,
-      "idx_stanovi": 49,
-      "oglas_stanovi": 49,
-      "oglas_kuce": 49,
-      "bj_stanovi": 49,
-      "bj_kuce": 49
+      "idx_kuce": 50,
+      "idx_stanovi": 50,
+      "oglas_stanovi": 50,
+      "oglas_kuce": 50,
+      "bj_stanovi": 50,
+      "bj_kuce": 50
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "nj_kuce": [
+        "12:16 - 503 Server Error: Service Unavailable for url: https://www.njuskalo.hr/prodaja-kuca?price%5Bmax%5D=340000&geo%5BlocationIds%5D=1731%2C1765%2C1766"
+      ],
+      "nj_stanovi": [
+        "12:16 - 503 Server Error: Service Unavailable for url: https://www.njuskalo.hr/prodaja-stanova?geo%5BlocationIds%5D=1731,1765,1766&price%5Bmax%5D=240000&livingArea%5Bmin%5D=35"
+      ]
+    },
     "last_report_counts": {
       "kuce": 66,
       "stanovi": 78,
