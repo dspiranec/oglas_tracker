@@ -3,18 +3,22 @@
   "stanovi": 78,
   "_stats": {
     "date": "2026-09-16",
-    "total_runs": 26,
+    "total_runs": 27,
     "successful_scrapes": {
-      "nj_kuce": 26,
+      "nj_kuce": 27,
       "nj_stanovi": 26,
-      "idx_kuce": 26,
-      "idx_stanovi": 26,
-      "oglas_stanovi": 26,
-      "oglas_kuce": 26,
-      "bj_stanovi": 26,
-      "bj_kuce": 26
+      "idx_kuce": 27,
+      "idx_stanovi": 27,
+      "oglas_stanovi": 27,
+      "oglas_kuce": 27,
+      "bj_stanovi": 27,
+      "bj_kuce": 27
     },
-    "failed_scrapes": {},
+    "failed_scrapes": {
+      "nj_stanovi": [
+        "06:31 - Selector 'strong.entities-count' not found on https://www.njuskalo.hr/prodaja-stanova?geo[locationIds]=1731,1765,1766&price[max]=240000&livingArea[min]=35"
+      ]
+    },
     "last_report_counts": {
       "kuce": 66,
       "stanovi": 78,
